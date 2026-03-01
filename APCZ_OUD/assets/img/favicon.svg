@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#000000" />
+      <stop offset="1" stop-color="#141414" />
+    </linearGradient>
+    <radialGradient id="r" cx="70%" cy="30%" r="80%">
+      <stop offset="0" stop-color="#F4C400" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#F4C400" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="256" height="256" fill="url(#g)"/>
+  <rect width="256" height="256" fill="url(#r)"/>
+  <g fill="none" stroke="#F4C400" stroke-opacity="0.35">
+    <path d="M0,710 C240,640 330,770 520,710 C720,640 820,760 1020,710 C1220,660 1340,720 1600,680" stroke-width="3"/>
+    <path d="M0,760 C260,700 340,820 540,760 C740,700 860,820 1060,760 C1260,710 1360,780 1600,740" stroke-width="2"/>
+  </g>
+  <g font-family="system-ui, -apple-system, Segoe UI, Roboto, Arial" text-anchor="middle">
+    <text x="800" y="410" font-size="64" font-weight="800" fill="#ffffff">APCZ</text>
+    <text x="800" y="470" font-size="26" font-weight="600" fill="#F4C400"></text>
+    <text x="800" y="540" font-size="18" fill="#cfcfcf">Vervang deze afbeelding door jouw eigen foto (assets/img/...)</text>
+  </g>
+</svg>
