@@ -1,5 +1,6 @@
 /* =========================================================
-   APCZ Static Site — Luxe geel/zwart/wit
+   APCZ — Luxe (geel/zwart/wit) + Laravel views compat
+   File: public/css/style.css
    ========================================================= */
 
 :root{
@@ -34,11 +35,48 @@ a{ color: inherit; text-decoration: none; }
 button{ font: inherit; }
 ::selection{ background: rgba(244,196,0,.35); }
 
+/* Layout */
 .container{
   width: min(var(--container), calc(100% - 36px));
   margin: 0 auto;
 }
 
+.center{ text-align:center; }
+.stack{ display:grid; gap: 14px; }
+
+/* Typo */
+.h1{
+  margin: 12px 0 10px;
+  font-weight: 950;
+  line-height: 1.06;
+  font-size: clamp(2.1rem, 4.2vw, 3.5rem);
+}
+.h2{
+  font-size: clamp(1.7rem, 2.3vw, 2.4rem);
+  font-weight: 950;
+  line-height: 1.15;
+  margin: 0 0 12px;
+}
+.p{
+  font-size: 1.08rem;
+  line-height: 1.95;
+  margin: 0;
+  color: var(--muted);
+}
+.lead{
+  color: rgba(255,255,255,.86);
+  font-size: 1.1rem;
+  line-height: 1.95;
+  max-width: 920px;
+  margin: 0 auto;
+}
+.card__text{
+  margin: 0 0 14px;
+  color: rgba(0,0,0,.78);
+  line-height: 1.85;
+}
+
+/* Topbar */
 .topbar{
   background: #060606;
   color: rgba(255,255,255,.86);
@@ -54,19 +92,15 @@ button{ font: inherit; }
 .topbar__left, .topbar__right{
   display:flex; gap: 18px; align-items:center; flex-wrap: wrap;
 }
-.topbar__item{
-  display:inline-flex; gap: 10px; align-items:center;
-}
-.topbar__icon{
-  width: 16px; height: 16px; display:inline-block;
-  opacity: .9;
-}
+.topbar__item{ display:inline-flex; gap: 10px; align-items:center; }
+.topbar__icon{ width: 16px; height: 16px; display:inline-block; opacity: .9; }
 .topbar__social a{
   display:inline-flex; padding: 6px; border-radius: 999px;
   border: 1px solid rgba(255,255,255,.12);
 }
 .topbar__social a:hover{ border-color: rgba(244,196,0,.7); }
 
+/* Header / Nav */
 .header{
   position: sticky;
   top: 0;
@@ -75,9 +109,7 @@ button{ font: inherit; }
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(255,255,255,.10);
 }
-.header.is-scrolled{
-  background: rgba(11,11,11,.94);
-}
+.header.is-scrolled{ background: rgba(11,11,11,.94); }
 .header .container{
   display:flex;
   align-items:center;
@@ -91,13 +123,6 @@ button{ font: inherit; }
   gap: 12px;
   min-width: 220px;
 }
-.brand__logo{
-  width: 44px; height: 44px; border-radius: 12px;
-  background: var(--yellow);
-  display:grid; place-items:center;
-  box-shadow: 0 14px 40px rgba(244,196,0,.22);
-}
-.brand__logo svg{ width: 26px; height: 26px; }
 .brand__name{
   color: #fff;
   font-weight: 900;
@@ -109,7 +134,6 @@ button{ font: inherit; }
   font-size: .92rem;
   margin-top: 2px;
 }
-
 .nav{
   display:flex;
   align-items:center;
@@ -127,13 +151,11 @@ button{ font: inherit; }
   background: rgba(255,255,255,.06);
   color: #fff;
 }
-.nav a.active{
-  color: var(--yellow);
-}
+.nav a.active{ color: var(--yellow); }
 
-.header__actions{
-  display:flex; align-items:center; gap: 10px;
-}
+.header__actions{ display:flex; align-items:center; gap: 10px; }
+
+/* Buttons */
 .btn{
   display:inline-flex;
   align-items:center;
@@ -149,6 +171,7 @@ button{ font: inherit; }
   user-select: none;
 }
 .btn:active{ transform: translateY(1px); }
+
 .btn--primary{
   background: var(--yellow);
   color: #090909;
@@ -156,6 +179,7 @@ button{ font: inherit; }
   box-shadow: 0 18px 55px rgba(244,196,0,.25);
 }
 .btn--primary:hover{ filter: brightness(0.98); }
+
 .btn--outline{
   background: transparent;
   border-color: rgba(255,255,255,.18);
@@ -165,6 +189,7 @@ button{ font: inherit; }
   border-color: rgba(244,196,0,.70);
   color: #fff;
 }
+
 .btn--dark{
   background: #0b0b0b;
   color: #fff;
@@ -172,6 +197,7 @@ button{ font: inherit; }
 }
 .btn--dark:hover{ border-color: rgba(244,196,0,.55); }
 
+/* Mobile menu button */
 .hamburger{
   display:none;
   width: 44px; height: 44px;
@@ -199,8 +225,12 @@ button{ font: inherit; }
   font-weight: 700;
 }
 .mobile-menu a:hover{ background: rgba(255,255,255,.06); }
-.mobile-menu a.cta{ background: rgba(244,196,0,.12); border: 1px solid rgba(244,196,0,.35); }
+.mobile-menu a.cta{
+  background: rgba(244,196,0,.12);
+  border: 1px solid rgba(244,196,0,.35);
+}
 
+/* Hero */
 .hero{
   position: relative;
   background: radial-gradient(1200px 600px at 70% 20%, rgba(244,196,0,.18), transparent 60%),
@@ -208,13 +238,18 @@ button{ font: inherit; }
   color:#fff;
   overflow: hidden;
 }
+
 .hero__slider{
   height: clamp(520px, 72vh, 820px);
   border-bottom-left-radius: var(--radius-lg);
   border-bottom-right-radius: var(--radius-lg);
   overflow:hidden;
   position: relative;
+  /* extra premium edge */
+  box-shadow: 0 40px 160px rgba(0,0,0,.55);
 }
+
+/* Slides created by JS should get .hero__slide */
 .hero__slide{
   position:absolute;
   inset:0;
@@ -222,19 +257,17 @@ button{ font: inherit; }
   transform: scale(1.02);
   transition: opacity .8s ease, transform 1.1s ease;
 }
-.hero__slide.is-active{
-  opacity:1;
-  transform: scale(1);
-}
+.hero__slide.is-active{ opacity:1; transform: scale(1); }
+
 .hero__slide::after{
   content:"";
   position:absolute; inset:0;
-  background: linear-gradient(90deg, rgba(0,0,0,.72) 0%, rgba(0,0,0,.35) 45%, rgba(0,0,0,.15) 100%);
+  background:
+    linear-gradient(90deg, rgba(0,0,0,.74) 0%, rgba(0,0,0,.38) 45%, rgba(0,0,0,.10) 100%),
+    radial-gradient(900px 420px at 30% 40%, rgba(244,196,0,.14), transparent 62%);
 }
-.hero__slide img{
-  width:100%; height:100%;
-  object-fit: cover;
-}
+.hero__slide img{ width:100%; height:100%; object-fit: cover; }
+
 .hero__content{
   margin-top: -88px;
   position: relative;
@@ -250,6 +283,7 @@ button{ font: inherit; }
   text-align: center;
   backdrop-filter: blur(8px);
 }
+
 .kicker{
   color: var(--yellow);
   text-transform: uppercase;
@@ -257,19 +291,7 @@ button{ font: inherit; }
   font-weight: 850;
   font-size: .9rem;
 }
-.h1{
-  margin: 12px 0 10px;
-  font-weight: 950;
-  line-height: 1.06;
-  font-size: clamp(2.1rem, 4.2vw, 3.5rem);
-}
-.lead{
-  color: rgba(255,255,255,.86);
-  font-size: 1.1rem;
-  line-height: 1.95;
-  max-width: 920px;
-  margin: 0 auto;
-}
+
 .usps{
   margin: 18px auto 0;
   max-width: 980px;
@@ -287,6 +309,7 @@ button{ font: inherit; }
   text-align: left;
 }
 .usp b{ color: var(--yellow); margin-right: 10px; }
+
 .hero__cta{
   margin-top: 18px;
   display:flex;
@@ -295,7 +318,7 @@ button{ font: inherit; }
   flex-wrap: wrap;
 }
 
-/* Sections with alternating background + fade separator */
+/* Sections */
 .section{
   padding: 88px 0;
   position: relative;
@@ -304,6 +327,10 @@ button{ font: inherit; }
 .section--yellow{ background: var(--yellow); color: #0b0b0b; }
 .section--dark{ background: var(--black); color: #fff; }
 
+.section--yellow .p{ color: rgba(0,0,0,.72); }
+.section--dark .p{ color: var(--muted-on-dark); }
+
+/* Fade separators */
 .section.fade-to-white::after,
 .section.fade-to-yellow::after,
 .section.fade-to-dark::after{
@@ -317,42 +344,22 @@ button{ font: inherit; }
 .section.fade-to-yellow::after{ background: linear-gradient(180deg, rgba(244,196,0,0) 0%, var(--yellow) 100%); }
 .section.fade-to-dark::after{ background: linear-gradient(180deg, rgba(11,11,11,0) 0%, var(--black) 100%); }
 
-.h2{
-  font-size: clamp(1.7rem, 2.3vw, 2.4rem);
-  font-weight: 950;
-  line-height: 1.15;
-  margin: 0 0 12px;
-}
-.p{
-  font-size: 1.08rem;
-  line-height: 1.95;
-  margin: 0;
-  color: var(--muted);
-}
-.section--yellow .p{ color: rgba(0,0,0,.72); }
-.section--dark .p{ color: var(--muted-on-dark); }
-
-.center{ text-align:center; }
-.stack{ display:grid; gap: 14px; }
-
+/* Grids */
 .grid-3{
   display:grid;
   grid-template-columns: repeat(3, minmax(0,1fr));
   gap: 18px;
   margin-top: 26px;
 }
-@media (max-width: 980px){
-  .grid-3{ grid-template-columns: 1fr; }
-  .usps{ grid-template-columns: 1fr; }
-}
 
+/* Cards */
 .card{
   background: rgba(255,255,255,.96);
   border: 1px solid rgba(0,0,0,.10);
   border-radius: 22px;
   overflow: hidden;
   box-shadow: var(--shadow);
-  transition: transform .25s ease, box-shadow .25s ease;
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
 }
 .section--yellow .card{ background: rgba(255,255,255,.93); }
 .section--dark .card{
@@ -363,41 +370,47 @@ button{ font: inherit; }
 .card:hover{
   transform: translateY(-4px);
   box-shadow: 0 30px 90px rgba(0,0,0,.16);
+  border-color: rgba(244,196,0,.26);
 }
 .card__media{
   aspect-ratio: 4 / 3;
   overflow: hidden;
+  background: rgba(0,0,0,.04);
 }
 .card__media img{
   width: 100%; height: 100%;
   object-fit: cover;
 }
-.card__body{
-  padding: 18px 18px 20px;
-}
+.card__body{ padding: 18px 18px 20px; }
 .card__title{
   font-weight: 950;
   font-size: 1.18rem;
   margin: 0 0 8px;
 }
-.card__text{
-  margin: 0 0 14px;
-  color: rgba(0,0,0,.78);
-  line-height: 1.85;
-}
 .section--dark .card__title{ color:#fff; }
 .section--dark .card__text{ color: rgba(255,255,255,.78); }
 
+/* Make action buttons in cards feel aligned */
+.card__body .btn{ width: fit-content; }
+.card__body > .btn{ margin-top: 8px; }
+
+/* “Selected” state for extra buttons (JS toggles aria-pressed) */
+.extra-pick[aria-pressed="true"]{
+  background: var(--yellow) !important;
+  color: #0b0b0b !important;
+  border-color: rgba(0,0,0,.10) !important;
+  box-shadow: 0 18px 55px rgba(244,196,0,.20);
+}
+
+/* Split */
 .split{
   display:grid;
   grid-template-columns: 1.1fr .9fr;
   gap: 22px;
   align-items: center;
 }
-@media (max-width: 980px){
-  .split{ grid-template-columns: 1fr; }
-}
 
+/* Badges / Stars */
 .badge{
   display:inline-flex;
   align-items:center;
@@ -426,7 +439,6 @@ button{ font: inherit; }
   gap: 16px;
   margin-top: 22px;
 }
-@media (max-width: 980px){ .gallery{ grid-template-columns: 1fr; } }
 .gallery img{
   width:100%;
   aspect-ratio: 4 / 3;
@@ -436,14 +448,7 @@ button{ font: inherit; }
   box-shadow: 0 16px 55px rgba(0,0,0,.10);
 }
 
-/* Contact */
-.contact-grid{
-  display:grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 18px;
-  margin-top: 22px;
-}
-@media (max-width: 980px){ .contact-grid{ grid-template-columns: 1fr; } }
+/* Form inputs (if you use .input somewhere) */
 .input{
   width: 100%;
   padding: 14px 14px;
@@ -456,6 +461,7 @@ button{ font: inherit; }
 textarea.input{ min-height: 140px; resize: vertical; }
 .input:focus{ border-color: rgba(244,196,0,.7); box-shadow: 0 0 0 4px rgba(244,196,0,.18); }
 
+/* Footer */
 .footer{
   background: #060606;
   color: rgba(255,255,255,.80);
@@ -466,10 +472,7 @@ textarea.input{ min-height: 140px; resize: vertical; }
   grid-template-columns: 1.2fr 1fr 1fr;
   gap: 22px;
 }
-@media (max-width: 980px){ .footer .container{ grid-template-columns: 1fr; } }
-.footer h3{
-  color: #fff; margin: 0 0 12px; font-weight: 900;
-}
+.footer h3{ color: #fff; margin: 0 0 12px; font-weight: 900; }
 .footer a{ color: rgba(255,255,255,.82); }
 .footer a:hover{ color: var(--yellow); }
 .footer__bottom{
@@ -515,16 +518,19 @@ textarea.input{ min-height: 140px; resize: vertical; }
   transform: translateY(0);
 }
 
-/* Responsive nav */
+/* Responsive */
 @media (max-width: 980px){
+  .grid-3{ grid-template-columns: 1fr; }
+  .usps{ grid-template-columns: 1fr; }
+  .split{ grid-template-columns: 1fr; }
+  .gallery{ grid-template-columns: 1fr; }
+
   .nav{ display:none; }
   .hamburger{ display:inline-grid; place-items:center; }
   .brand{ min-width: auto; }
 }
 
-
-
-/* ===== APCZ Logo override ===== */
+/* ===== APCZ Logo override (behoud) ===== */
 .brand__logo{
   width: 92px;
   height: 56px;
@@ -543,4 +549,245 @@ textarea.input{ min-height: 140px; resize: vertical; }
 }
 @media (max-width: 720px){
   .brand__logo{ width: 78px; height: 48px; }
+}
+
+/* ==============================
+   REVIEWS — Glass + Water overlay
+   ============================== */
+
+.section#reviews{
+  position: relative;
+  overflow: hidden;
+}
+
+/* maak geel minder "vlak" */
+.section#reviews.section--yellow{
+  background:
+    radial-gradient(1200px 700px at 50% 25%, rgba(255,255,255,.22), rgba(255,255,255,0) 55%),
+    radial-gradient(900px 500px at 20% 60%, rgba(0,0,0,.06), rgba(0,0,0,0) 60%),
+    linear-gradient(180deg, #F4C400 0%, #F4C400 60%, #F7F4E6 100%);
+}
+
+/* water droplets overlay (subtiel) */
+.section#reviews::before{
+  content:"";
+  position:absolute;
+  inset:-80px;
+  pointer-events:none;
+  opacity:.55;
+  background:
+    radial-gradient(18px 18px at 18% 30%, rgba(255,255,255,.28), rgba(255,255,255,0) 70%),
+    radial-gradient(26px 26px at 32% 44%, rgba(255,255,255,.18), rgba(255,255,255,0) 70%),
+    radial-gradient(14px 14px at 48% 26%, rgba(255,255,255,.22), rgba(255,255,255,0) 70%),
+    radial-gradient(22px 22px at 64% 40%, rgba(255,255,255,.20), rgba(255,255,255,0) 70%),
+    radial-gradient(30px 30px at 78% 30%, rgba(255,255,255,.16), rgba(255,255,255,0) 70%),
+    radial-gradient(16px 16px at 84% 55%, rgba(255,255,255,.18), rgba(255,255,255,0) 70%),
+    radial-gradient(28px 28px at 20% 70%, rgba(255,255,255,.14), rgba(255,255,255,0) 70%),
+    radial-gradient(20px 20px at 55% 72%, rgba(255,255,255,.14), rgba(255,255,255,0) 70%);
+  filter: blur(.2px);
+}
+
+/* zachte vignette */
+.section#reviews::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background: radial-gradient(900px 460px at 50% 40%, rgba(0,0,0,.06), rgba(0,0,0,0) 70%);
+  opacity:.65;
+}
+
+/* Reviews wrap */
+.reviews-wrap{
+  position: relative;
+  z-index: 2;
+  margin-top: 18px;
+  display: grid;
+  gap: 14px;
+}
+
+/* Glass card */
+.review-card{
+  max-width: 880px;
+  margin: 0 auto;
+  border-radius: 26px;
+  border: 1px solid rgba(255,255,255,.38);
+  background: rgba(255,255,255,.56);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 30px 110px rgba(0,0,0,.16);
+  overflow: hidden;
+}
+
+/* top highlight line */
+.review-card__top{
+  height: 2px;
+  background: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,.9), rgba(255,255,255,0));
+  opacity:.65;
+}
+
+/* slider stage */
+.review-stage{
+  position: relative;
+  padding: 22px 22px 18px;
+  min-height: 160px;
+}
+
+/* slides */
+.review-slide{
+  position:absolute;
+  inset: 22px 22px 18px;
+  opacity:0;
+  transform: translateY(8px);
+  transition: opacity .55s ease, transform .55s ease;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  gap: 12px;
+}
+.review-slide.is-active{
+  opacity:1;
+  transform: translateY(0);
+}
+
+/* quote */
+.review-quote{
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: rgba(10,10,10,.86);
+  margin:0;
+}
+.review-meta{
+  color: rgba(10,10,10,.62);
+  font-weight: 700;
+  font-size: .98rem;
+}
+
+/* actions */
+.review-actions{
+  display:flex;
+  gap:10px;
+  justify-content:center;
+  flex-wrap:wrap;
+  padding: 0 22px 18px;
+}
+
+/* dots */
+.review-dots{
+  display:flex;
+  justify-content:center;
+  gap:8px;
+  padding-bottom: 16px;
+}
+.review-dot{
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: rgba(0,0,0,.20);
+  border: 1px solid rgba(255,255,255,.45);
+  transition: transform .15s ease, background .2s ease;
+}
+.review-dot.is-active{
+  background: rgba(0,0,0,.52);
+  transform: scale(1.2);
+}
+
+/* arrows - super subtiel */
+.review-nav{
+  position:absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.45);
+  background: rgba(0,0,0,.10);
+  backdrop-filter: blur(10px);
+  color: rgba(0,0,0,.70);
+  display:grid;
+  place-items:center;
+  cursor:pointer;
+  transition: background .2s ease, transform .15s ease;
+}
+.review-nav:hover{ background: rgba(0,0,0,.16); }
+.review-nav:active{ transform: translateY(-50%) scale(.98); }
+
+.review-nav--prev{ left: 14px; }
+.review-nav--next{ right: 14px; }
+
+/* mobile */
+@media (max-width: 720px){
+  .review-stage{ padding: 18px 16px 16px; min-height: 190px; }
+  .review-slide{ inset: 18px 16px 16px; }
+  .review-nav{ display:none; } /* dots + swipe feel is genoeg */
+}
+
+/* =========================================================
+   REVIEWS — micro water animation (subtiel, luxe)
+   Plak ONDERAAN style.css
+   ========================================================= */
+
+/* Alleen voor reviews-sectie */
+.section#reviews{
+  position: relative;
+  overflow: hidden;
+}
+
+/* Water droplets overlay (statisch base) */
+.section#reviews::before{
+  content:"";
+  position:absolute;
+  inset:-90px;
+  pointer-events:none;
+  opacity:.55;
+  background:
+    radial-gradient(18px 18px at 18% 30%, rgba(255,255,255,.28), rgba(255,255,255,0) 70%),
+    radial-gradient(26px 26px at 32% 44%, rgba(255,255,255,.18), rgba(255,255,255,0) 70%),
+    radial-gradient(14px 14px at 48% 26%, rgba(255,255,255,.22), rgba(255,255,255,0) 70%),
+    radial-gradient(22px 22px at 64% 40%, rgba(255,255,255,.20), rgba(255,255,255,0) 70%),
+    radial-gradient(30px 30px at 78% 30%, rgba(255,255,255,.16), rgba(255,255,255,0) 70%),
+    radial-gradient(16px 16px at 84% 55%, rgba(255,255,255,.18), rgba(255,255,255,0) 70%),
+    radial-gradient(28px 28px at 20% 70%, rgba(255,255,255,.14), rgba(255,255,255,0) 70%),
+    radial-gradient(20px 20px at 55% 72%, rgba(255,255,255,.14), rgba(255,255,255,0) 70%);
+  filter: blur(.2px);
+  transform: translate3d(0,0,0);
+  animation: apczDropletsDrift 22s ease-in-out infinite;
+  will-change: transform;
+}
+
+/* Extra "shimmer" laag (heel zacht) */
+.section#reviews::after{
+  content:"";
+  position:absolute;
+  inset:-120px;
+  pointer-events:none;
+  opacity:.18;
+  background:
+    radial-gradient(900px 460px at 45% 45%, rgba(255,255,255,.22), rgba(255,255,255,0) 70%),
+    linear-gradient(120deg, rgba(255,255,255,0) 35%, rgba(255,255,255,.22) 50%, rgba(255,255,255,0) 65%);
+  mix-blend-mode: soft-light;
+  transform: translate3d(0,0,0);
+  animation: apczShimmer 14s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+/* Drift: mini beweging (water/condens vibe) */
+@keyframes apczDropletsDrift{
+  0%   { transform: translate3d(-10px, -8px, 0) scale(1); }
+  50%  { transform: translate3d(10px,  6px, 0) scale(1.015); }
+  100% { transform: translate3d(-10px, -8px, 0) scale(1); }
+}
+
+/* Shimmer: heel langzaam, bijna niet merkbaar */
+@keyframes apczShimmer{
+  0%   { transform: translate3d(-18px, 0, 0); opacity: .12; }
+  50%  { transform: translate3d(18px, 0, 0);  opacity: .22; }
+  100% { transform: translate3d(-18px, 0, 0); opacity: .12; }
+}
+
+/* Respecteer gebruikers die motion uitzetten */
+@media (prefers-reduced-motion: reduce){
+  .section#reviews::before,
+  .section#reviews::after{
+    animation: none !important;
+  }
 }

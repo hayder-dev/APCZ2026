@@ -13,7 +13,6 @@
 
       <div style="margin-top:14px; display:flex; gap:10px; justify-content:center; flex-wrap:wrap;">
         <a class="btn btn--dark" href="#albums">Bekijk albums</a>
-        <a class="btn btn--primary" href="{{ route('contact') }}">Afspraak / offerte</a>
       </div>
     </div>
   </div>

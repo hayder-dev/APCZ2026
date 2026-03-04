@@ -15,9 +15,13 @@ Route::view('/contact', 'pages.contact')->name('contact');
 Route::view('/privacy', 'pages.privacy')->name('privacy');
 Route::view('/voorwaarden', 'pages.voorwaarden')->name('voorwaarden');
 
-Route::view('/info/auto-laten-poetsen', 'pages.info_auto')->name('info.auto');
-Route::view('/info/dealers-showroom', 'pages.info_dealers')->name('info.dealers');
-Route::view('/info/wagenpark-zakelijk', 'pages.info_zakelijk')->name('info.zakelijk');
+// INFO PAGINA
+Route::view('/info', 'pages.info.index')->name('info.index');
+
+// De drie hoofdstukken van de info pagina
+Route::view('/info/auto-laten-poetsen', 'pages.info.auto')->name('info.auto');
+Route::view('/info/dealers-showroom', 'pages.info.dealers')->name('info.dealers');
+Route::view('/info/wagenpark-zakelijk', 'pages.info.zakelijk')->name('info.zakelijk');
 
 // RDW lookup endpoint
 Route::get('/rdw/lookup', [RdwController::class, 'lookup'])->name('rdw.lookup');
