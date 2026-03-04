@@ -26,11 +26,14 @@
         {{-- Contact extra zichtbaar bovenin (zoals je wilde) --}}
         <span class="topbar__item">
           <span class="topbar__icon" aria-hidden="true">➜</span>
-          <a href="{{ route('contact') }}"><b>Contact</b></a>
+       
         </span>
       </div>
 
       <div class="topbar__right">
+         <a href="{{ route('faq') }}">Faq</a>
+        <a href="{{ route('vacatures') }}">Vacatures</a>
+          <a href="{{ route('contact') }}"><b>Contact</b></a>
         <div class="topbar__social" aria-label="Social media">
           <a href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
             IG
@@ -61,13 +64,10 @@
         <a href="{{ route('diensten') }}">Diensten</a>
         <a href="{{ route('projecten') }}">Projecten</a>
         <a href="{{ route('zakelijk') }}">Zakelijk</a>
-        <a href="{{ route('contact') }}">Contact</a>
-        <a href="{{ route('faq') }}">faq</a>
-        <a href="{{ route('vacatures') }}">Vacatures</a>
       </nav>
 
       <div class="header__actions">
-        <a class="btn btn--primary" href="{{ route('contact') }}">Afspraak plannen</a>
+        <a class="btn btn--primary" href="{{ route('contact') }}">Afspraak inplannen</a>
       </div>
     </div>
   </header>
