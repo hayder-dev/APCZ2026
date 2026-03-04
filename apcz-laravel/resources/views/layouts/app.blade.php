@@ -9,6 +9,40 @@
 </head>
 <body>
 
+  {{-- ✅ TOPBAR (bovenste balk) --}}
+  <div class="topbar">
+    <div class="container">
+      <div class="topbar__left">
+        <span class="topbar__item">
+          <span class="topbar__icon" aria-hidden="true">☎</span>
+          <a href="tel:+31649777080">06 - 49777080</a>
+        </span>
+
+        <span class="topbar__item">
+          <span class="topbar__icon" aria-hidden="true">✉</span>
+          <a href="mailto:boekingen@apczaanstad.nl">boekingen@apczaanstad.nl</a>
+        </span>
+
+        {{-- Contact extra zichtbaar bovenin (zoals je wilde) --}}
+        <span class="topbar__item">
+          <span class="topbar__icon" aria-hidden="true">➜</span>
+          <a href="{{ route('contact') }}"><b>Contact</b></a>
+        </span>
+      </div>
+
+      <div class="topbar__right">
+        <div class="topbar__social" aria-label="Social media">
+          <a href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
+            IG
+          </a>
+          <a href="https://facebook.com/" target="_blank" rel="noopener" aria-label="Facebook">
+            FB
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <header class="header">
     <div class="container">
       <a class="brand" href="{{ route('home') }}">
@@ -28,6 +62,8 @@
         <a href="{{ route('projecten') }}">Projecten</a>
         <a href="{{ route('zakelijk') }}">Zakelijk</a>
         <a href="{{ route('contact') }}">Contact</a>
+        <a href="{{ route('faq') }}">faq</a>
+        <a href="{{ route('vacatures') }}">Vacatures</a>
       </nav>
 
       <div class="header__actions">

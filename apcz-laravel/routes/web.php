@@ -32,3 +32,11 @@ Route::post('/contact', [ContactController::class, 'send'])->name('contact.send'
 // projecten
 Route::get('/projecten/{album}', [ProjectenController::class, 'album'])
   ->name('projecten.album');
+
+  // Routes voor de bovenste header..
+
+  Route::get('/vacatures', fn() => view('pages.vacatures'))->name('vacatures');
+  Route::get('/vacatures/interieur', fn() => view('pages.vacature-interieur'))->name('vacature.interieur');
+  Route::get('/vacatures/polijsten', fn() => view('pages.vacature-polijsten'))->name('vacature.polijsten');
+
+  Route::get('/faq', fn() => view('pages.faq'))->name('faq');
