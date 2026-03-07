@@ -8,7 +8,7 @@
   {{-- Slideshow --}}
   <div id="heroSlider"
        class="hero__slider"
-       data-slides="{{ asset('assets/img/hero-1.jfif') }},{{ asset('assets/img/hero-2.jfif') }},{{ asset('assets/img/hero-3.jfif') }},{{ asset('assets/img/hero-4.jfif') }},{{ asset('assets/img/hero-5.jfif') }}"
+       data-slides="{{ asset('assets/img/home-1.jpg') }},{{ asset('assets/img/home-2.jpg') }},{{ asset('assets/img/home-3.jpg') }},{{ asset('assets/img/home-4.jpg') }},{{ asset('assets/img/home-5.jpg') }}"
        data-interval="4600"
        data-alt="Auto Poets Centrale Zaanstad">
   </div>
@@ -117,7 +117,7 @@
     <div class="grid-3 route-grid">
       <div class="card">
         <div class="card__media">
-          <img src="{{ asset('assets/img/service-1.svg') }}" alt="Auto laten poetsen"/>
+          <img src="{{ asset('assets/img/service-auto.jpg') }}" alt="Auto laten poetsen"/>
         </div>
         <div class="card__body">
           <div class="card__title">Auto laten poetsen</div>
@@ -132,7 +132,7 @@
 
       <div class="card">
         <div class="card__media">
-          <img src="{{ asset('assets/img/service-3.svg') }}" alt="Dealers & showroom"/>
+          <img src="{{ asset('assets/img/info-dealers.jpg') }}" alt="Dealers & showroom"/>
         </div>
         <div class="card__body">
           <div class="card__title">Dealers & showroom</div>
@@ -147,7 +147,7 @@
 
       <div class="card">
         <div class="card__media">
-          <img src="{{ asset('assets/img/service-2.svg') }}" alt="Wagenpark & zakelijk"/>
+          <img src="{{ asset('assets/img/info-zakelijk.jpg') }}" alt="Wagenpark & zakelijk"/>
         </div>
         <div class="card__body">
           <div class="card__title">Wagenpark & zakelijk</div>
@@ -190,8 +190,8 @@
       </div>
 
       <div class="media-card">
-        <img src="{{ asset('assets/img/studio.svg') }}"
-             alt="Fotostudio / detailing"/>
+        <img src="{{ asset('assets/img/studio-photo.jpg') }}"
+             alt="Fotostudio en verkooppresentatie"/>
       </div>
     </div>
   </div>
@@ -280,10 +280,10 @@
       </div>
     </div>
 
-    <div class="studio-preview">
-      <img src="{{ asset('assets/img/studio.svg') }}"
-           alt="Fotostudio en verkooppresentatie"/>
-    </div>
+   <div class="studio-preview" style="max-width:760px; margin:22px auto 0;">
+  <img src="{{ asset('assets/img/studio-photo2.jpg') }}"
+       alt="Fotostudio en verkooppresentatie"/>
+</div>
   </div>
 </section>
 
@@ -293,15 +293,15 @@
     <div class="center stack">
       <h2 class="h2">Projecten</h2>
       <p class="p section-intro">
-        Een greep uit ons werk. Later kun je de placeholder afbeeldingen vervangen door jouw eigen foto’s.
+        Een greep uit ons werk.
       </p>
     </div>
 
     <div class="gallery">
-      <img src="{{ asset('assets/img/hero-1.jfif') }}" alt="Project 1"/>
-      <img src="{{ asset('assets/img/hero-2.jfif') }}" alt="Project 2"/>
-      <img src="{{ asset('assets/img/hero-3.jfif') }}" alt="Project 3"/>
-    </div>
+  <img src="{{ asset('assets/projects/exterieur/01.JPEG') }}" alt="Project 1"/>
+  <img src="{{ asset('assets/projects/showroom/02.JPEG') }}" alt="Project 2"/>
+  <img src="{{ asset('assets/projects/interieur/03.JPEG') }}" alt="Project 3"/>
+</div>
 
     <div class="center section-cta">
       <a class="btn btn--primary" href="{{ route('projecten') }}">Meer projecten</a>

@@ -32,7 +32,7 @@
       {{-- 1 INTERIEUR --}}
       <div class="card">
         <div class="card__media">
-          <img src="{{ asset('assets/img/hero-1.jfif') }}" alt="Interieur detail">
+          <img src="{{ asset('assets/projects/interieur/01.JPEG') }}" alt="Interieur detail">
         </div>
         <div class="card__body">
           <div class="card__title">Interieur detail</div>
@@ -49,7 +49,7 @@
       {{-- 2 EXTERIEUR --}}
       <div class="card">
         <div class="card__media">
-          <img src="{{ asset('assets/img/hero-2.jfif') }}" alt="Exterieur detail">
+          <img src="{{ asset('assets/projects/exterieur/01.JPEG') }}" alt="Exterieur detail">
         </div>
         <div class="card__body">
           <div class="card__title">Exterieur detail</div>
@@ -66,7 +66,7 @@
       {{-- 3 POLIJSTEN --}}
       <div class="card">
         <div class="card__media">
-          <img src="{{ asset('assets/img/hero-3.jfif') }}" alt="Polijsten en lakcorrectie">
+          <img src="{{ asset('assets/projects/polijsten/01.JPEG') }}" alt="Polijsten en lakcorrectie">
         </div>
         <div class="card__body">
           <div class="card__title">Polijsten & lakcorrectie</div>
@@ -83,7 +83,7 @@
       {{-- 4 VERKOOPKLAAR --}}
       <div class="card">
         <div class="card__media">
-          <img src="{{ asset('assets/img/hero-4.jfif') }}" alt="Verkoopklaar en showroomstaat">
+          <img src="{{ asset('assets/projects/showroom/01.JPEG') }}" alt="Verkoopklaar en showroomstaat">
         </div>
         <div class="card__body">
           <div class="card__title">Verkoopklaar / showroomstaat</div>
@@ -100,7 +100,7 @@
       {{-- 5 ZAKELIJK --}}
       <div class="card">
         <div class="card__media">
-          <img src="{{ asset('assets/img/hero-5.jfif') }}" alt="Zakelijk en wagenpark">
+          <img src="{{ asset('assets/projects/zakelijk/01.JPEG') }}" alt="Zakelijk en wagenpark">
         </div>
         <div class="card__body">
           <div class="card__title">Zakelijk & wagenpark</div>
@@ -117,7 +117,7 @@
       {{-- 6 COATINGS --}}
       <div class="card">
         <div class="card__media">
-          <img src="{{ asset('assets/img/hero-1.jfif') }}" alt="Coatings en bescherming">
+          <img src="{{ asset('assets/projects/coatings/01.JPEG') }}" alt="Coatings en bescherming">
         </div>
         <div class="card__body">
           <div class="card__title">Coatings & bescherming</div>

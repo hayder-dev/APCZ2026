@@ -53,7 +53,7 @@
     <div class="card reveal" style="margin-top:22px;">
       <div class="card__media">
         <img
-          src="{{ asset('assets/img/hero-1.jfif') }}"
+          src="{{ asset('assets/projects/zakelijk/11.JPEG') }}"
           alt="APCZ studio / detailing"
         >
       </div>
