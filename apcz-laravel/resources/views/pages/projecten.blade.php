@@ -3,16 +3,20 @@
 @section('title','Projecten — APCZ')
 
 @section('content')
-<section class="section section--white" style="padding-top:40px;">
+
+<section class="page-hero">
   <div class="container">
-    <div class="center stack">
-      <h1 class="h1">Projecten</h1>
-      <p class="p" style="max-width:980px; margin:0 auto;">
-        Een selectie van ons werk. Kies een album om voorbeelden te bekijken. Foto’s worden later door ons aangevuld met jouw nieuwste projecten.
+    <div class="page-hero__inner reveal">
+      <div class="page-hero__kicker">Projecten • Resultaten • Portfolio</div>
+      <h1 class="page-hero__title">Projecten</h1>
+      <p class="page-hero__lead">
+        Bekijk een selectie van ons werk, geordend op type behandeling. Zo zie je in één oogopslag
+        wat wij doen op het gebied van interieur, exterieur, lakcorrectie, showroomafwerking en bescherming.
       </p>
 
-      <div style="margin-top:14px; display:flex; gap:10px; justify-content:center; flex-wrap:wrap;">
+      <div class="page-hero__cta">
         <a class="btn btn--dark" href="#albums">Bekijk albums</a>
+        <a class="btn btn--primary" href="{{ route('contact') }}">Neem contact op</a>
       </div>
     </div>
   </div>
@@ -21,17 +25,20 @@
 <section class="section section--white" id="albums">
   <div class="container">
 
-    <div class="grid-3" style="margin-top:18px;">
+ 
 
-      {{-- 1) Interieur --}}
+    <div class="grid-3 reveal" style="margin-top:22px;">
+
+      {{-- 1 INTERIEUR --}}
       <div class="card">
         <div class="card__media">
-          <img src="{{ asset('assets/img/hero-1.jfif') }}" alt="Interieur detailing">
+          <img src="{{ asset('assets/img/hero-1.jfif') }}" alt="Interieur detail">
         </div>
         <div class="card__body">
           <div class="card__title">Interieur detail</div>
           <p class="card__text">
-            Dieptereiniging, kierenwerk en afwerking voor een fris, hygiënisch en representatief interieur.
+            Projecten gericht op dieptereiniging, kierenwerk, bekleding, contactpunten en nette afwerking
+            voor een fris, hygiënisch en representatief interieur.
           </p>
           <div style="margin-top:14px; display:flex; justify-content:center;">
             <a class="btn btn--dark" href="{{ route('projecten.album', ['album' => 'interieur']) }}">Bekijk album</a>
@@ -39,15 +46,16 @@
         </div>
       </div>
 
-      {{-- 2) Exterieur --}}
+      {{-- 2 EXTERIEUR --}}
       <div class="card">
         <div class="card__media">
-          <img src="{{ asset('assets/img/hero-2.jfif') }}" alt="Exterieur detailing">
+          <img src="{{ asset('assets/img/hero-2.jfif') }}" alt="Exterieur detail">
         </div>
         <div class="card__body">
-          <div class="card__title">Exterieur</div>
+          <div class="card__title">Exterieur detail</div>
           <p class="card__text">
-            Handwas, decontaminatie en finishing voor een strakke glans en een nette, verzorgde uitstraling.
+            Resultaten van handwas, decontaminatie, velgenreiniging en finishing waarbij de buitenkant
+            weer strak, fris en verzorgd oogt.
           </p>
           <div style="margin-top:14px; display:flex; justify-content:center;">
             <a class="btn btn--dark" href="{{ route('projecten.album', ['album' => 'exterieur']) }}">Bekijk album</a>
@@ -55,15 +63,16 @@
         </div>
       </div>
 
-      {{-- 3) Polijsten --}}
+      {{-- 3 POLIJSTEN --}}
       <div class="card">
         <div class="card__media">
-          <img src="{{ asset('assets/img/hero-3.jfif') }}" alt="Polijsten / lakcorrectie">
+          <img src="{{ asset('assets/img/hero-3.jfif') }}" alt="Polijsten en lakcorrectie">
         </div>
         <div class="card__body">
           <div class="card__title">Polijsten & lakcorrectie</div>
           <p class="card__text">
-            1–3 stap polijsten om swirls/wasstraatkrassen te verminderen en glans terug te brengen (veilig waar mogelijk).
+            Voorbeelden van 1-staps tot 3-staps polijsten waarbij swirls, wasstraatkrassen en dof lakbeeld
+            waar veilig mogelijk worden verminderd.
           </p>
           <div style="margin-top:14px; display:flex; justify-content:center;">
             <a class="btn btn--dark" href="{{ route('projecten.album', ['album' => 'polijsten']) }}">Bekijk album</a>
@@ -71,15 +80,16 @@
         </div>
       </div>
 
-      {{-- 4) Showroom --}}
+      {{-- 4 VERKOOPKLAAR --}}
       <div class="card">
         <div class="card__media">
-          <img src="{{ asset('assets/img/hero-4.jfif') }}" alt="Showroom afwerking">
+          <img src="{{ asset('assets/img/hero-4.jfif') }}" alt="Verkoopklaar en showroomstaat">
         </div>
         <div class="card__body">
-          <div class="card__title">Showroom</div>
+          <div class="card__title">Verkoopklaar / showroomstaat</div>
           <p class="card__text">
-            Totaalplaatje: interieur + exterieur + finishing, klaar voor presentatie of verkoop.
+            Complete projecten waarbij het totaalplaatje centraal staat: interieur, exterieur, finishing
+            en een uitstraling die direct geschikt is voor presentatie of verkoop.
           </p>
           <div style="margin-top:14px; display:flex; justify-content:center;">
             <a class="btn btn--dark" href="{{ route('projecten.album', ['album' => 'showroom']) }}">Bekijk album</a>
@@ -87,15 +97,16 @@
         </div>
       </div>
 
-      {{-- 5) Zakelijk --}}
+      {{-- 5 ZAKELIJK --}}
       <div class="card">
         <div class="card__media">
-          <img src="{{ asset('assets/img/hero-5.jfif') }}" alt="Zakelijk / wagenpark">
+          <img src="{{ asset('assets/img/hero-5.jfif') }}" alt="Zakelijk en wagenpark">
         </div>
         <div class="card__body">
           <div class="card__title">Zakelijk & wagenpark</div>
           <p class="card__text">
-            Representatieve voertuigen, periodieke verzorging en een consistente uitstraling voor je bedrijf.
+            Projecten voor bedrijfswagens, leaseauto’s en wagenparken waarbij representativiteit,
+            planning en consistente uitstraling centraal staan.
           </p>
           <div style="margin-top:14px; display:flex; justify-content:center;">
             <a class="btn btn--dark" href="{{ route('projecten.album', ['album' => 'zakelijk']) }}">Bekijk album</a>
@@ -103,15 +114,16 @@
         </div>
       </div>
 
-      {{-- 6) Coatings --}}
+      {{-- 6 COATINGS --}}
       <div class="card">
         <div class="card__media">
-          <img src="{{ asset('assets/img/hero-1.jfif') }}" alt="Coatings">
+          <img src="{{ asset('assets/img/hero-1.jfif') }}" alt="Coatings en bescherming">
         </div>
         <div class="card__body">
-          <div class="card__title">Coatings</div>
+          <div class="card__title">Coatings & bescherming</div>
           <p class="card__text">
-            Glas/keramische coatings en beschermlagen. Advies op basis van gebruik, lakconditie en budget.
+            Beelden van beschermlagen, glascoatings, keramische coatings en andere behandelingen
+            die gericht zijn op behoud, glans en makkelijker onderhoud.
           </p>
           <div style="margin-top:14px; display:flex; justify-content:center;">
             <a class="btn btn--dark" href="{{ route('projecten.album', ['album' => 'coatings']) }}">Bekijk album</a>
@@ -121,6 +133,23 @@
 
     </div>
 
+    <div class="card reveal" style="margin-top:24px;">
+      <div class="card__body">
+        <div class="center stack">
+          <h2 class="h2" style="margin-bottom:0;">Ook benieuwd wat mogelijk is voor jouw auto?</h2>
+          <p class="p section-intro">
+            Ieder voertuig vraagt om een andere aanpak. Staat jouw type klus of gewenste behandeling
+            nog niet tussen de voorbeelden, neem dan gerust contact met ons op.
+          </p>
+
+          <div class="action-row action-row--center" style="margin-top:8px;">
+           
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
+
 @endsection

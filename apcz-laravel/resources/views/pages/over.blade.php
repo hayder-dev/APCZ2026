@@ -2,59 +2,76 @@
 @section('title','Over ons — APCZ')
 
 @section('content')
-<section class="section section--white" style="padding-top:40px;">
+
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero__inner reveal">
+      <div class="page-hero__kicker">Sinds 2003 • Zaanstad • Randstad</div>
+      <h1 class="page-hero__title">Over Auto Poets Centrale Zaanstad</h1>
+      <p class="page-hero__lead">
+        Al sinds <b>2003</b> draait het bij ons om één ding: auto’s afleveren zoals ze horen te ogen —
+        strak, fris en representatief. Geen snelle schoonmaak, maar verzorging met aandacht, ervaring en gevoel voor detail.
+      </p>
+
+      <div class="page-hero__cta">
+        <a class="btn btn--primary" href="{{ route('contact') }}">Afspraak plannen</a>
+        <a class="btn btn--dark" href="{{ route('diensten') }}">Bekijk pakketten</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--white">
   <div class="container">
 
-    {{-- Intro --}}
-   <div class="center stack">
-  <h1 class="h1">Over Auto Poets Centrale Zaanstad</h1>
+    <div class="card reveal" style="max-width:1100px; margin:0 auto;">
+      <div class="card__body" style="padding:32px 28px;">
+        <div class="center stack">
+          <span class="badge">Sinds 2003 • +20 jaar ervaring • Vakmanschap • Vertrouwen</span>
 
-  <p class="p" style="max-width:980px; margin:0 auto;">
-    Sinds <b>2003</b> verzorgen wij voertuigen in <b>Zaandam, Zaanstad en de Randstad</b> met één duidelijke missie:
-    een resultaat dat écht klopt. Geen “even snel schoon”, maar een afwerking die je direct ziet en voelt — strak,
-    verzorgd en representatief.
-  </p>
+          <p class="p section-intro">
+            <b>Auto Poets Centrale Zaanstad bestaat sinds 2003.</b> In die jaren hebben wij talloze voertuigen verzorgd
+            voor particulieren, zakelijke rijders, dealers en wagenparken in Zaandam, Zaanstad en de rest van de Randstad.
+            Die ervaring zie je terug in onze werkwijze: rustig, zorgvuldig en met oog voor het totaalplaatje.
+          </p>
 
-  <p class="p" style="max-width:980px; margin:10px auto 0;">
-    Wij werken met een <b>sterk en ervaren team</b> dat oog heeft voor detail. Van het eerste contact tot de oplevering
-    houden we het proces helder: <b>duidelijke afspraken</b>, een <b>nette planning</b> en vooral <b>keurig werk</b>.
-    We nemen de tijd waar het nodig is en werken met <b>veilige methodes</b> en <b>professionele middelen</b>,
-    zodat jouw auto niet alleen mooi oogt, maar ook verantwoord behandeld wordt.
-    Of het nu gaat om een onderhoudsbeurt, showroom-afwerking of periodieke verzorging van een wagenpark:
-    bij de auto poets centrale draait het om <b>consistentie</b>, <b>kwaliteit</b> en <b>vertrouwen</b> — elke auto opnieuw.
-  </p>
+          <p class="p section-intro">
+            Voor ons is een auto pas echt klaar wanneer hij niet alleen schoon is, maar ook <b>verzorgd aanvoelt</b>.
+            Dat zit in de details: strak glas, nette randen, een fris interieur, een verzorgd lakbeeld en een uitstraling
+            die direct vertrouwen geeft. Geen half werk, maar een resultaat dat klopt.
+          </p>
 
- 
+          <p class="p section-intro">
+            Wij werken met duidelijke afspraken, veilige methodes en professionele producten. Of het nu gaat om periodiek onderhoud,
+            showroom-afwerking, verkoopvoorbereiding of een complete opfrisbeurt: bij Auto Poets Centrale Zaanstad
+            draait het om <b>consistentie, kwaliteit en nette oplevering</b> — elke auto opnieuw.
+          </p>
+        </div>
+      </div>
+    </div>
 
-  <div style="margin-top:14px; display:flex; gap:10px; justify-content:center; flex-wrap:wrap;">
-    <!-- laat je knoppen hier staan -->
-  </div>
-</div>
-
-    {{-- Hero foto (optioneel) --}}
-    <div class="card" style="margin-top:18px;">
+    <div class="card reveal" style="margin-top:22px;">
       <div class="card__media">
         <img
           src="{{ asset('assets/img/hero-1.jfif') }}"
           alt="APCZ studio / detailing"
-          style="width:100%; height:auto; display:block;"
         >
       </div>
     </div>
 
-    {{-- 3 blokken --}}
-    <div class="grid-3" style="margin-top:18px; align-items:start;">
+    <div class="grid-3 reveal" style="margin-top:22px; align-items:start;">
       <div class="card">
         <div class="card__body">
           <div class="card__title">Onze aanpak</div>
-          <p class="card__text" style="opacity:.88;">
-            Wij werken rustig en gecontroleerd. Dat zie je terug in het eindresultaat:
-            nette randen, schoon glas, strak interieur en een verzorgde buitenkant.
+          <p class="card__text">
+            Wij werken rustig, gecontroleerd en met aandacht voor detail. Juist daarin zit het verschil:
+            een auto die niet alleen schoon lijkt, maar echt verzorgd voor de dag komt.
           </p>
+
           <ul class="card__text" style="margin-top:8px; padding-left:18px;">
-            <li>Veilige technieken & juiste middelen</li>
-            <li>Detail-afwerking (kieren, randen, instap)</li>
-            <li>Heldere planning en duidelijke afspraken</li>
+            <li>Veilige technieken en professionele middelen</li>
+            <li>Detail-afwerking van kieren, randen en instappen</li>
+            <li>Heldere planning en duidelijke communicatie</li>
           </ul>
         </div>
       </div>
@@ -62,16 +79,18 @@
       <div class="card">
         <div class="card__body">
           <div class="card__title">Voor wie we werken</div>
-          <p class="card__text" style="opacity:.88;">
-            Zowel particulier als zakelijk. Van één auto tot grotere aantallen.
+          <p class="card__text">
+            Wij werken voor zowel particuliere als zakelijke klanten — van één auto tot grotere aantallen.
           </p>
+
           <ul class="card__text" style="margin-top:8px; padding-left:18px;">
-            <li>Particulieren (onderhoud, verkoop, liefhebbers)</li>
-            <li>Dealers / handel (showroom & voorraad)</li>
-            <li>Wagenparken / lease / bedrijfswagens</li>
+            <li>Particulieren die hun auto netjes willen houden</li>
+            <li>Dealers en handelaren met showroom- en voorraadauto’s</li>
+            <li>Wagenparken, leaseauto’s en bedrijfswagens</li>
           </ul>
-          <p class="card__text" style="opacity:.85; margin-top:10px;">
-            Zakelijk werken we desgewenst met vaste slots en periodiek onderhoud.
+
+          <p class="card__text" style="margin-top:10px;">
+            Voor zakelijke klanten kunnen wij ook werken met vaste slots en periodiek onderhoud.
           </p>
         </div>
       </div>
@@ -79,60 +98,84 @@
       <div class="card">
         <div class="card__body">
           <div class="card__title">Kwaliteit & transparantie</div>
-          <p class="card__text" style="opacity:.88;">
-            We doen geen loze beloftes. We zijn eerlijk over wat haalbaar is — zeker bij lak, krassen en beschadigingen.
+          <p class="card__text">
+            Wij doen geen loze beloftes. We zijn eerlijk over wat haalbaar is en kiezen altijd voor een veilige,
+            verantwoorde aanpak die past bij de staat van het voertuig.
           </p>
+
           <ul class="card__text" style="margin-top:8px; padding-left:18px;">
-            <li><b>Motorruimte reinigen:</b> op eigen risico</li>
-            <li><b>(Gerepareerde) schade/gespoten delen:</b> vooraf melden</li>
-            <li>Bij extreme vervuiling kan toeslag gelden (altijd vooraf besproken)</li>
+            <li><b>Motorruimte reinigen:</b> altijd op eigen risico</li>
+            <li><b>Schade of gespoten delen:</b> graag vooraf melden</li>
+            <li>Bij extreme vervuiling bespreken we extra werk vooraf</li>
           </ul>
         </div>
       </div>
     </div>
 
-    {{-- Werkwijze + doorlooptijd --}}
-    <div class="card" style="margin-top:18px;">
+    <div class="card reveal" style="margin-top:22px;">
       <div class="card__body">
-        <div class="card__title">Zo verloopt een afspraak</div>
-        <p class="card__text" style="opacity:.88; max-width:980px;">
-          Je plant een afspraak, we stemmen het doel af en jij levert de auto aan. Daarna voeren wij de behandeling uit en leveren we netjes op.
-          In veel gevallen geldt: voertuig om <b>08:00</b> brengen = <b>dezelfde dag</b> ophalen (open tot <b>17:00</b>).
-        </p>
+        <div class="center stack">
+          <h2 class="h2">Zo verloopt een afspraak</h2>
+          <p class="p section-intro">
+            Je plant een afspraak, we stemmen samen het doel af en daarna voeren wij de behandeling zorgvuldig uit.
+            In veel gevallen geldt: voertuig om <b>08:00</b> brengen = <b>dezelfde dag</b> ophalen
+            (wij zijn geopend tot <b>17:00</b>).
+          </p>
+        </div>
 
-        <div class="grid-3" style="margin-top:14px; align-items:start;">
+        <div class="grid-3" style="margin-top:18px; align-items:start;">
           <div class="card">
             <div class="card__body">
               <div class="card__title">1) Intake</div>
-              <p class="card__text" style="opacity:.88;">
-                Doel bepalen en de juiste behandeling kiezen (pakket + eventuele extra’s).
+              <p class="card__text">
+                We bespreken jouw wensen, kijken naar de staat van de auto en bepalen welke behandeling het beste past.
               </p>
             </div>
           </div>
+
           <div class="card">
             <div class="card__body">
               <div class="card__title">2) Uitvoering</div>
-              <p class="card__text" style="opacity:.88;">
-                Veilig reinigen, detailwerk en finishing. Geen haastwerk, wel strak resultaat.
+              <p class="card__text">
+                Daarna volgt de behandeling: veilig reinigen, detailwerk en nette finishing — zonder haastwerk.
               </p>
             </div>
           </div>
+
           <div class="card">
             <div class="card__body">
               <div class="card__title">3) Oplevering</div>
-              <p class="card__text" style="opacity:.88;">
-                Controle en oplevering. Je auto staat er representatief en verzorgd bij.
+              <p class="card__text">
+                Na controle leveren we de auto netjes op, met een uitstraling die weer past bij het voertuig.
               </p>
             </div>
           </div>
         </div>
 
-        <div style="margin-top:14px; display:flex; gap:10px; justify-content:center; flex-wrap:wrap;">
-             <a class="btn btn--primary" href="{{ route('contact') }}?route=over">Wilt u een afspraak maken?</a>
+        <div class="action-row action-row--center" style="margin-top:18px;">
+          <a class="btn btn--primary" href="{{ route('contact') }}?route=over">Plan je afspraak</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card reveal" style="margin-top:22px;">
+      <div class="card__body">
+        <div class="center stack">
+          <h2 class="h2" style="margin-bottom:0;">Nieuwsgierig? Kom gerust langs.</h2>
+          <p class="p section-intro">
+            Wil je eerst sfeer proeven, overleggen over jouw auto of gewoon even kijken wat we doen?
+            Je bent van harte welkom om contact op te nemen of langs te komen. Dan laten we je graag zien
+            hoe wij werken en wat het beste past bij jouw voertuig.
+          </p>
+
+          <div class="action-row action-row--center" style="margin-top:8px;">
+          
+          </div>
         </div>
       </div>
     </div>
 
   </div>
 </section>
+
 @endsection

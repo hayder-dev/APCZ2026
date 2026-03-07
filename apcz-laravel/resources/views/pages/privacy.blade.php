@@ -1,98 +1,180 @@
 @extends('layouts.app')
 
-@section('title','Privacy — APCZ')
+@section('title','Privacy — Auto Poets Centrale')
 
 @section('content')
-<section class="section section--white" style="padding-top:40px;">
+
+<section class="page-hero">
   <div class="container">
-    <div class="center stack">
-      <h1 class="h1">Privacy</h1>
-      <p class="p" style="max-width:980px; margin:0 auto;">
-        Wij gaan zorgvuldig om met jouw gegevens. Op deze pagina leggen we uit welke informatie we verzamelen,
-        waarom we dat doen en hoe lang we het bewaren.
+    <div class="page-hero__inner reveal">
+      <div class="page-hero__kicker">Auto Poets Centrale • Privacy • Gegevensbescherming</div>
+      <h1 class="page-hero__title">Privacy</h1>
+      <p class="page-hero__lead">
+        Auto Poets Centrale  gaat zorgvuldig om met jouw persoonsgegevens. Op deze pagina leggen wij uit
+        welke gegevens wij verwerken, waarom wij dat doen, hoe lang wij deze bewaren en welke rechten je hebt.
       </p>
 
-      <div style="margin-top:14px; display:flex; gap:10px; justify-content:center; flex-wrap:wrap;">
+      <div class="page-hero__cta">
         <a class="btn btn--dark" href="#gegevens">Welke gegevens</a>
         <a class="btn btn--dark" href="#doel">Waarom</a>
         <a class="btn btn--dark" href="#bewaartermijn">Bewaartermijn</a>
-        <a class="btn btn--primary" href="{{ route('contact') }}">Contact</a>
+        <a class="btn btn--dark" href="#rechten">Jouw rechten</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--white">
+  <div class="container">
+
+    <div class="card reveal" style="max-width:1100px; margin:0 auto 22px;">
+      <div class="card__body" style="padding:30px 28px;">
+        <div class="center stack">
+          <span class="badge">Auto Poets Centrale Zaanstad</span>
+          <p class="p section-intro">
+            Wij vinden het belangrijk dat jouw gegevens veilig en vertrouwelijk worden behandeld.
+            Persoonsgegevens worden uitsluitend gebruikt voor onze dienstverlening, communicatie,
+            planning en administratieve afhandeling.
+          </p>
+        </div>
       </div>
     </div>
 
-    <div class="card" style="margin-top:18px;" id="gegevens">
-      <div class="card__body">
-        <div class="card__title">Welke gegevens verwerken wij?</div>
-        <p class="card__text" style="margin-top:8px;">
-          Wanneer je contact met ons opneemt of een afspraak aanvraagt, kunnen we de volgende gegevens verwerken:
-        </p>
-        <ul class="card__text" style="margin-top:8px; padding-left:18px;">
-          <li>Naam</li>
-          <li>Telefoonnummer en/of e-mailadres</li>
-          <li>Gegevens over het voertuig (bijv. merk/model/kenteken) die je zelf aanlevert</li>
-          <li>Berichtinhoud (zoals wensen, staat van de auto, planning)</li>
-        </ul>
+    <div class="grid-3 reveal" style="margin-top:0; align-items:start;">
+
+      <div class="card" id="gegevens" style="grid-column:span 2;">
+        <div class="card__body">
+          <div class="card__title">Welke gegevens verwerken wij?</div>
+          <p class="card__text" style="margin-top:8px;">
+            Wanneer je contact met ons opneemt, een afspraak aanvraagt of gebruik maakt van onze diensten,
+            kunnen wij onder andere de volgende gegevens verwerken:
+          </p>
+          <ul class="card__text" style="margin-top:8px; padding-left:18px;">
+            <li>Naam</li>
+            <li>Telefoonnummer en/of e-mailadres</li>
+            <li>Adresgegevens, indien relevant voor facturatie of contact</li>
+            <li>Gegevens over het voertuig, zoals merk, model, kenteken en aanvullende informatie die je zelf verstrekt</li>
+            <li>Berichtinhoud, wensen, planning en aanvullende toelichtingen over de behandeling</li>
+            <li>Factuur- en betaalgegevens wanneer sprake is van een zakelijke of administratieve verwerking</li>
+          </ul>
+        </div>
       </div>
+
+      <div class="card">
+        <div class="card__body">
+          <div class="card__title">Uitgangspunt</div>
+          <p class="card__text">
+            Wij verwerken niet meer gegevens dan nodig is.
+          </p>
+          <p class="card__text" style="margin-bottom:0;">
+            Alleen gegevens die relevant zijn voor contact, planning, uitvoering of administratie worden bewaard.
+          </p>
+        </div>
+      </div>
+
+      <div class="card" id="doel">
+        <div class="card__body">
+          <div class="card__title">Waarom verzamelen wij deze gegevens?</div>
+          <ul class="card__text" style="margin-top:8px; padding-left:18px;">
+            <li>Om contact met je op te nemen en vragen te beantwoorden</li>
+            <li>Om afspraken in te plannen en behandelingen correct uit te voeren</li>
+            <li>Om offertes, bevestigingen of aanvullende informatie te verstrekken</li>
+            <li>Voor administratieve verwerking, zoals facturatie en zakelijke afhandeling</li>
+            <li>Voor service, opvolging en nazorg rondom een uitgevoerde behandeling</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card" id="bewaartermijn">
+        <div class="card__body">
+          <div class="card__title">Bewaartermijn</div>
+          <p class="card__text" style="margin-top:8px;">
+            Auto Poets Centrale Zaanstad bewaart persoonsgegevens niet langer dan noodzakelijk is voor het doel waarvoor zij zijn verzameld.
+          </p>
+          <ul class="card__text" style="margin-top:8px; padding-left:18px;">
+            <li>Contact- en afspraakgegevens bewaren wij in de praktijk maximaal <b>24 maanden</b> voor service, opvolging en terugkerend contact.</li>
+            <li>Factuur- en administratieve gegevens bewaren wij zolang dit wettelijk verplicht is.</li>
+            <li>Wanneer gegevens niet langer nodig zijn, worden deze verwijderd of niet langer actief gebruikt.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card" id="delen">
+        <div class="card__body">
+          <div class="card__title">Delen met derden</div>
+          <p class="card__text" style="margin-top:8px;">
+            Auto Poets Centrale Zaanstad verkoopt jouw gegevens niet aan derden en verstrekt deze uitsluitend wanneer dit nodig is voor de uitvoering van onze dienstverlening of wanneer wij daartoe wettelijk verplicht zijn.
+          </p>
+          <p class="card__text" style="margin-bottom:0;">
+            Denk hierbij bijvoorbeeld aan hosting, e-mailverwerking of administratieve ondersteuning, voor zover dat nodig is voor een correcte uitvoering van onze werkzaamheden.
+          </p>
+        </div>
+      </div>
+
+      <div class="card" id="cookies">
+        <div class="card__body">
+          <div class="card__title">Cookies</div>
+          <p class="card__text" style="margin-top:8px;">
+            Onze website kan functionele cookies gebruiken om de website goed te laten werken.
+          </p>
+          <p class="card__text" style="margin-bottom:0;">
+            Wanneer in de toekomst aanvullende cookies, zoals analytische of marketingcookies, worden toegepast,
+            zal deze privacypagina daarop worden aangepast.
+          </p>
+        </div>
+      </div>
+
+      <div class="card" id="rechten" style="grid-column:span 2;">
+        <div class="card__body">
+          <div class="card__title">Jouw rechten</div>
+          <p class="card__text" style="margin-top:8px;">
+            Je hebt het recht om te weten welke persoonsgegevens wij van jou verwerken. Daarnaast kun je in veel gevallen verzoeken om:
+          </p>
+          <ul class="card__text" style="margin-top:8px; padding-left:18px;">
+            <li>inzage in jouw gegevens;</li>
+            <li>correctie van onjuiste gegevens;</li>
+            <li>verwijdering van gegevens, voor zover dit wettelijk mogelijk is;</li>
+            <li>beperking van het gebruik van jouw gegevens.</li>
+          </ul>
+          <p class="card__text" style="margin-bottom:0;">
+            Voor vragen of verzoeken hierover kun je contact opnemen via onze contactpagina of per WhatsApp.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card__body">
+          <div class="card__title">Vertrouwelijkheid</div>
+          <p class="card__text">
+            Wij behandelen verstrekte gegevens vertrouwelijk en nemen passende maatregelen om misbruik,
+            verlies of onbevoegde toegang zoveel mogelijk te voorkomen.
+          </p>
+          <p class="card__text" style="margin-bottom:0;">
+            Hoewel geen enkel systeem volledige zekerheid kan garanderen, gaan wij zorgvuldig en verantwoordelijk om met alle informatie die je met ons deelt.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card__body">
+          <div class="card__title">Vragen?</div>
+          <p class="card__text">
+            Heb je vragen over deze privacyverklaring of over de manier waarop Auto Poets Centrale Zaanstad met persoonsgegevens omgaat,
+            neem dan gerust contact met ons op.
+          </p>
+          <p class="card__text" style="margin-bottom:0;">
+            Wij helpen je graag verder.
+          </p>
+        </div>
+      </div>
+
     </div>
 
-    <div class="card" style="margin-top:18px;" id="doel">
-      <div class="card__body">
-        <div class="card__title">Waarom verzamelen we deze gegevens?</div>
-        <ul class="card__text" style="margin-top:8px; padding-left:18px;">
-          <li>Om contact met je op te nemen en vragen te beantwoorden</li>
-          <li>Om een afspraak/offerte te maken en onze planning te regelen</li>
-          <li>Voor administratieve afhandeling (bijv. factuur op naam)</li>
-          <li>Voor service en nazorg rondom een uitgevoerde behandeling</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="card" style="margin-top:18px;" id="bewaartermijn">
-      <div class="card__body">
-        <div class="card__title">Bewaartermijn</div>
-        <p class="card__text" style="margin-top:8px;">
-          We bewaren gegevens niet langer dan nodig. In de praktijk houden we contact-/afspraakgegevens maximaal
-          <b>24 maanden</b> aan voor service en opvolging, tenzij we wettelijk verplicht zijn gegevens langer te bewaren
-          (bijv. factuurgegevens).
-        </p>
-      </div>
-    </div>
-
-    <div class="card" style="margin-top:18px;" id="delen">
-      <div class="card__body">
-        <div class="card__title">Delen met derden</div>
-        <p class="card__text" style="margin-top:8px;">
-          We delen jouw gegevens niet met derden, behalve wanneer dat nodig is voor onze dienstverlening
-          (bijvoorbeeld hosting of e-mail) of wanneer we daartoe wettelijk verplicht zijn.
-        </p>
-      </div>
-    </div>
-
-    <div class="card" style="margin-top:18px;" id="cookies">
-      <div class="card__body">
-        <div class="card__title">Cookies</div>
-        <p class="card__text" style="margin-top:8px;">
-          Onze website kan functionele cookies gebruiken om de site goed te laten werken.
-          Als we later analytics of marketing cookies toevoegen, passen we deze pagina daarop aan.
-        </p>
-      </div>
-    </div>
-
-    <div class="card" style="margin-top:18px;" id="rechten">
-      <div class="card__body">
-        <div class="card__title">Jouw rechten</div>
-        <ul class="card__text" style="margin-top:8px; padding-left:18px;">
-          <li>Je mag jouw gegevens inzien, laten corrigeren of laten verwijderen (waar mogelijk).</li>
-          <li>Stuur hiervoor een bericht via onze contactpagina of WhatsApp.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="center" style="margin-top:22px;">
-      <a class="btn btn--primary" href="{{ route('contact') }}">Contact opnemen</a>
-      <a class="btn btn--outline" href="https://wa.me/31649777080" target="_blank" rel="noopener">WhatsApp</a>
+    <div class="center" style="margin-top:24px; display:flex; gap:10px; justify-content:center; flex-wrap:wrap;">
+      <a class="btn btn--primary" href="{{ route('contact') }}">Neem contact op</a>
     </div>
 
   </div>
 </section>
+
 @endsection

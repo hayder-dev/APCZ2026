@@ -40,7 +40,7 @@
           <a class="btn btn--outline" href="{{ route('diensten') }}">Bekijk pakketten</a>
         </div>
 
-        <div class="card__text" style="opacity:.8; margin-top:12px;">
+        <div class="card__text home-tip">
           Tip: lever je auto om <b>08:00</b> in — in de meeste gevallen kun je ‘m <b>dezelfde dag</b> weer ophalen (open tot <b>17:00</b>).
         </div>
       </div>
@@ -48,96 +48,73 @@
   </div>
 </section>
 
-{{-- Reviews (FADE slider + micro animatie via CSS op #reviews) --}}
-<section class="section section--yellow fade-to-white" id="reviews">
+{{-- Reviews --}}
+<section class="section section--yellow" id="reviews">
   <div class="container center reveal">
     <div class="stars">★★★★★</div>
     <h2 class="h2">5-sterren ervaring. Elke keer opnieuw.</h2>
 
-    <p class="p" style="max-width:980px; margin:0 auto;">
+    <p class="p reviews-intro">
       Klanten kiezen ons om één reden: <b>consistentie</b>. Geen half werk — maar een afwerking die klopt.
       Wij leveren een nette uitstraling, frisse cabine en een lakbeeld dat je met vertrouwen kunt laten zien.
     </p>
 
-    <div class="card" style="max-width:980px; margin:18px auto 0;">
-      <div class="card__body">
+    <div class="review-card review-card--home">
+      <div class="review-card__top"></div>
 
-        <div id="reviewSlider" style="position:relative; overflow:hidden; min-height:120px;">
-          {{-- Slides (fade) --}}
-          <div class="reviewSlide is-active" style="padding:6px 4px;">
-            <div class="card__text" style="font-size:16px; line-height:1.55;">
-              “Auto was echt <b>showroom</b> teruggekomen. Interieur super netjes en lak strak. Duidelijke afspraken en snel klaar.”
-            </div>
-            <div class="card__text" style="opacity:.75; margin-top:10px;">
-              <b>— Johan</b> • Google review
-            </div>
-          </div>
-
-          <div class="reviewSlide" style="padding:6px 4px;">
-            <div class="card__text" style="font-size:16px; line-height:1.55;">
-              “Je ziet dat ze het met aandacht doen. Details kloppen, randen schoon, en geen ‘haastwerk’ vibe.”
-            </div>
-            <div class="card__text" style="opacity:.75; margin-top:10px;">
-              <b>— Klaas</b> • Google review
-            </div>
-          </div>
-
-          <div class="reviewSlide" style="padding:6px 4px;">
-            <div class="card__text" style="font-size:16px; line-height:1.55;">
-              “Perfect voor verkoop. Foto’s en presentatie top, auto was advertentie-klaar. Aanrader.”
-            </div>
-            <div class="card__text" style="opacity:.75; margin-top:10px;">
-              <b>— Willem</b> • Google review
-            </div>
-          </div>
-
-          {{-- Controls --}}
-          <button type="button" id="revPrev" class="btn btn--dark"
-                  aria-label="Vorige review"
-                  style="position:absolute; left:10px; top:50%; transform:translateY(-50%); padding:10px 12px; border-radius:12px;">
-            ‹
-          </button>
-
-          <button type="button" id="revNext" class="btn btn--dark"
-                  aria-label="Volgende review"
-                  style="position:absolute; right:10px; top:50%; transform:translateY(-50%); padding:10px 12px; border-radius:12px;">
-            ›
-          </button>
+      <div class="review-stage" id="reviewSlider">
+        <div class="review-slide is-active">
+          <p class="review-quote">
+            “Auto was echt <b>showroom</b> teruggekomen. Interieur super netjes en lak strak. Duidelijke afspraken en snel klaar.”
+          </p>
+          <div class="review-meta"><b>— Johan</b> • Google review</div>
         </div>
 
-        {{-- Dots --}}
-        <div style="display:flex; gap:8px; justify-content:center; margin-top:12px;">
-          <button type="button" class="revDot" data-i="0" aria-label="Review 1"
-                  style="width:10px; height:10px; border-radius:999px; border:0; background:rgba(0,0,0,.7);"></button>
-          <button type="button" class="revDot" data-i="1" aria-label="Review 2"
-                  style="width:10px; height:10px; border-radius:999px; border:0; background:rgba(0,0,0,.22);"></button>
-          <button type="button" class="revDot" data-i="2" aria-label="Review 3"
-                  style="width:10px; height:10px; border-radius:999px; border:0; background:rgba(0,0,0,.22);"></button>
+        <div class="review-slide">
+          <p class="review-quote">
+            “Je ziet dat ze het met aandacht doen. Details kloppen, randen schoon, en geen ‘haastwerk’ vibe.”
+          </p>
+          <div class="review-meta"><b>— Klaas</b> • Google review</div>
         </div>
 
-        <div style="margin-top:16px; display:flex; gap:10px; justify-content:center; flex-wrap:wrap;">
-          <a class="btn btn--dark" href="https://www.google.com/search?q=auto+poets+centrale+zaanstad" target="_blank" rel="noopener">
-            Bekijk Google reviews
-          </a>
-          <a class="btn btn--primary" href="{{ route('contact') }}">Afspraak plannen</a>
+        <div class="review-slide">
+          <p class="review-quote">
+            “Perfect voor verkoop. Foto’s en presentatie top, auto was advertentie-klaar. Aanrader.”
+          </p>
+          <div class="review-meta"><b>— Willem</b> • Google review</div>
         </div>
 
+        <button type="button" id="revPrev" class="review-nav review-nav--prev" aria-label="Vorige review">‹</button>
+        <button type="button" id="revNext" class="review-nav review-nav--next" aria-label="Volgende review">›</button>
+      </div>
+
+      <div class="review-dots">
+        <button type="button" class="review-dot is-active revDot" data-i="0" aria-label="Review 1"></button>
+        <button type="button" class="review-dot revDot" data-i="1" aria-label="Review 2"></button>
+        <button type="button" class="review-dot revDot" data-i="2" aria-label="Review 3"></button>
+      </div>
+
+      <div class="review-actions">
+        <a class="btn btn--dark" href="https://www.google.com/search?q=auto+poets+centrale+zaanstad" target="_blank" rel="noopener">
+          Bekijk Google reviews
+        </a>
+        <a class="btn btn--primary" href="{{ route('contact') }}">Afspraak plannen</a>
       </div>
     </div>
   </div>
 </section>
 
 {{-- Route kiezen --}}
-<section class="section section--white fade-to-yellow" id="start">
+<section class="section section--white" id="start">
   <div class="container reveal">
     <div class="center stack">
       <h2 class="h2">Wat wil je laten doen?</h2>
-      <p class="p" style="max-width:980px; margin:0 auto;">
+      <p class="p section-intro">
         Kies de route die bij je past. Van een snelle opfrisbeurt tot complete showroom-afwerking (eventueel met foto’s).
       </p>
     </div>
 
-    <div class="grid-3" style="margin-top:16px;">
+    <div class="grid-3 route-grid">
       <div class="card">
         <div class="card__media">
           <img src="{{ asset('assets/img/service-1.svg') }}" alt="Auto laten poetsen"/>
@@ -187,9 +164,9 @@
 </section>
 
 {{-- Waarom APCZ --}}
-<section class="section section--yellow fade-to-white" id="over-home">
+<section class="section section--yellow" id="over-home">
   <div class="container reveal">
-    <div class="split">
+    <div class="split split--home">
       <div class="stack">
         <span class="badge">+20 jaar ervaring • Vakmanschap</span>
         <h2 class="h2">Meer dan schoon. Dit is detailing met impact.</h2>
@@ -200,107 +177,122 @@
           Het doel is altijd hetzelfde: een auto die er weer strak en verzorgd bij staat.
         </p>
 
-        <div class="usps" style="margin-top:10px;">
-          <div class="usp"><b>✓</b>Strak lakbeeld (waar veilig mogelijk)</div>
-          <div class="usp"><b>✓</b>Fris interieur met detailafwerking</div>
-          <div class="usp"><b>✓</b>Duidelijke afspraken & oplevering</div>
+        <div class="usps usps--light">
+          <div class="usp usp--light"><b>✓</b>Strak lakbeeld (waar veilig mogelijk)</div>
+          <div class="usp usp--light"><b>✓</b>Fris interieur met detailafwerking</div>
+          <div class="usp usp--light"><b>✓</b>Duidelijke afspraken & oplevering</div>
         </div>
 
-        <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:14px;">
+        <div class="action-row">
           <a class="btn btn--dark" href="{{ route('over') }}">Lees ons verhaal</a>
           <a class="btn btn--dark" href="{{ route('diensten') }}">Bekijk pakketten</a>
         </div>
       </div>
 
-      <div>
+      <div class="media-card">
         <img src="{{ asset('assets/img/studio.svg') }}"
-             alt="Fotostudio / detailing"
-             style="border-radius:24px; border:1px solid rgba(0,0,0,.10); box-shadow:0 26px 90px rgba(0,0,0,.14);"/>
+             alt="Fotostudio / detailing"/>
       </div>
     </div>
   </div>
 </section>
 
 {{-- Pakketten preview --}}
-<section class="section section--white fade-to-yellow" id="pakketten-preview">
+<section class="section section--white" id="pakketten-preview">
   <div class="container reveal">
     <div class="center stack">
       <h2 class="h2">Onze pakketten</h2>
-      <p class="p" style="max-width:980px; margin:0 auto;">
+      <p class="p section-intro">
         6 duidelijke opties — van opfrissen tot complete showroom met foto’s.
         Klik op “Meer info” voor de volledige inhoud per pakket.
       </p>
     </div>
 
-    <div class="grid-3" style="margin-top:18px;">
-      <div class="card"><div class="card__body">
-        <div class="card__title">Brons</div>
-        <p class="card__text">Snel fris & representatief. Perfect voor onderhoud.</p>
-        <a class="btn btn--dark" href="{{ route('diensten') }}#bronze">Meer info</a>
-      </div></div>
+    <div class="grid-3 package-grid">
+      <div class="card">
+        <div class="card__body">
+          <div class="card__title">Brons</div>
+          <p class="card__text">Snel fris & representatief. Perfect voor onderhoud.</p>
+          <a class="btn btn--dark" href="{{ route('diensten') }}#bronze">Meer info</a>
+        </div>
+      </div>
 
-      <div class="card"><div class="card__body">
-        <div class="card__title">Brons+</div>
-        <p class="card__text">Alles van Brons + wax voor extra glans en bescherming.</p>
-        <a class="btn btn--dark" href="{{ route('diensten') }}#bronze-wax">Meer info</a>
-      </div></div>
+      <div class="card">
+        <div class="card__body">
+          <div class="card__title">Brons+</div>
+          <p class="card__text">Alles van Brons + wax voor extra glans en bescherming.</p>
+          <a class="btn btn--dark" href="{{ route('diensten') }}#bronze-wax">Meer info</a>
+        </div>
+      </div>
 
-      <div class="card"><div class="card__body">
-        <div class="card__title">Zilver</div>
-        <p class="card__text">Interieur dieptereiniging + nette afwerking binnen.</p>
-        <a class="btn btn--dark" href="{{ route('diensten') }}#silver">Meer info</a>
-      </div></div>
+      <div class="card">
+        <div class="card__body">
+          <div class="card__title">Zilver</div>
+          <p class="card__text">Interieur dieptereiniging + nette afwerking binnen.</p>
+          <a class="btn btn--dark" href="{{ route('diensten') }}#silver">Meer info</a>
+        </div>
+      </div>
 
-      <div class="card"><div class="card__body">
-        <div class="card__title">Zilver+</div>
-        <p class="card__text">Exterieur: wassen + 3-staps polijsten + wax.</p>
-        <a class="btn btn--dark" href="{{ route('diensten') }}#exterieur">Meer info</a>
-      </div></div>
+      <div class="card">
+        <div class="card__body">
+          <div class="card__title">Zilver+</div>
+          <p class="card__text">Exterieur: wassen + 3-staps polijsten + wax.</p>
+          <a class="btn btn--dark" href="{{ route('diensten') }}#exterieur">Meer info</a>
+        </div>
+      </div>
 
-      <div class="card"><div class="card__body">
-        <div class="card__title">Goud</div>
-        <p class="card__text">Showroompakket: interieur + exterieur + motorruimte.</p>
-        <a class="btn btn--dark" href="{{ route('diensten') }}#gold">Meer info</a>
-      </div></div>
+      <div class="card">
+        <div class="card__body">
+          <div class="card__title">Goud</div>
+          <p class="card__text">Showroompakket: interieur + exterieur + motorruimte.</p>
+          <a class="btn btn--dark" href="{{ route('diensten') }}#gold">Meer info</a>
+        </div>
+      </div>
 
-      <div class="card"><div class="card__body">
-        <div class="card__title">Goud+</div>
-        <p class="card__text">Alles van Goud + professionele foto’s.</p>
-        <a class="btn btn--dark" href="{{ route('diensten') }}#platinum">Meer info</a>
-      </div></div>
+      <div class="card">
+        <div class="card__body">
+          <div class="card__title">Goud+</div>
+          <p class="card__text">Alles van Goud + professionele foto’s.</p>
+          <a class="btn btn--dark" href="{{ route('diensten') }}#platinum">Meer info</a>
+        </div>
+      </div>
     </div>
 
-    <div class="center" style="margin-top:22px;">
+    <div class="center section-cta">
       <a class="btn btn--primary" href="{{ route('diensten') }}">Alle pakketten bekijken</a>
     </div>
   </div>
 </section>
 
 {{-- Fotostudio --}}
-<section class="section section--yellow fade-to-white" id="fotostudio">
+<section class="section section--yellow" id="fotostudio">
   <div class="container reveal">
     <div class="center stack">
-      <h2 class="h2">Fotostudio</h2>
-      <p class="p" style="max-width:980px; margin:0 auto;">
+      <h2 class="h2">Fotostudio & verkooppresentatie</h2>
+      <p class="p section-intro">
         Na het reinigen en showroomklaar maken verzorgen we ook de presentatie.
-        Strakke belichting, rustige setting en detailshots die direct verkoopbaar ogen.
+        Strakke belichting, rustige compositie en detailshots die direct geschikt zijn voor verkoop,
+        advertenties en professionele online plaatsing.
       </p>
+
+      <div class="action-row action-row--center" style="margin-top:8px;">
+        <a class="btn btn--dark" href="{{ route('fotostudio') }}">Meer over fotostudio</a>
+      </div>
     </div>
 
-    <div style="margin-top:22px;">
+    <div class="studio-preview">
       <img src="{{ asset('assets/img/studio.svg') }}"
-           alt="Fotostudio"
-           style="border-radius:24px; border:1px solid rgba(0,0,0,.10); box-shadow:0 26px 90px rgba(0,0,0,.14);"/>
+           alt="Fotostudio en verkooppresentatie"/>
     </div>
   </div>
 </section>
 
 {{-- Projecten preview --}}
-<section class="section section--white fade-to-dark" id="projecten">
+<section class="section section--white" id="projecten">
   <div class="container reveal">
     <div class="center stack">
       <h2 class="h2">Projecten</h2>
-      <p class="p" style="max-width:980px; margin:0 auto;">
+      <p class="p section-intro">
         Een greep uit ons werk. Later kun je de placeholder afbeeldingen vervangen door jouw eigen foto’s.
       </p>
     </div>
@@ -311,7 +303,7 @@
       <img src="{{ asset('assets/img/hero-3.jfif') }}" alt="Project 3"/>
     </div>
 
-    <div class="center" style="margin-top:22px;">
+    <div class="center section-cta">
       <a class="btn btn--primary" href="{{ route('projecten') }}">Meer projecten</a>
     </div>
   </div>
@@ -321,13 +313,13 @@
 <section class="section section--dark" id="cta">
   <div class="container reveal">
     <div class="center stack">
-      <h2 class="h2" style="color:#fff;">Klaar voor een auto die weer écht klopt?</h2>
-      <p class="p" style="max-width:980px; margin:0 auto;">
+      <h2 class="h2 cta-title">Klaar voor een auto die weer écht klopt?</h2>
+      <p class="p section-intro section-intro--dark">
         Plan je afspraak of stuur ons direct een bericht. We denken mee over het beste pakket en leveren
         een afwerking die past bij de waarde van jouw voertuig.
       </p>
 
-      <div style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin-top:10px;">
+      <div class="action-row action-row--center">
         <a class="btn btn--primary" href="{{ route('contact') }}">Afspraak plannen</a>
         <a class="btn btn--outline" href="https://wa.me/31649777080" target="_blank" rel="noopener">WhatsApp</a>
       </div>
@@ -335,48 +327,24 @@
   </div>
 </section>
 
-{{-- Reviews slider (FADE, smooth) --}}
 <script>
 (function(){
   const slider = document.getElementById('reviewSlider');
   if(!slider) return;
 
-  const slides = Array.from(slider.querySelectorAll('.reviewSlide'));
+  const slides = Array.from(slider.querySelectorAll('.review-slide'));
   const prev = document.getElementById('revPrev');
   const next = document.getElementById('revNext');
   const dots = Array.from(document.querySelectorAll('.revDot'));
 
-  if(slides.length === 0 || !prev || !next || dots.length === 0) return;
-
-  // Inject mini CSS (fade) zonder je style.css te slopen
-  const css = document.createElement('style');
-  css.textContent = `
-    #reviewSlider { position:relative; }
-    #reviewSlider .reviewSlide{
-      position:absolute; inset:0;
-      opacity:0;
-      transform: translateY(6px);
-      transition: opacity .55s ease, transform .55s ease;
-      pointer-events:none;
-    }
-    #reviewSlider .reviewSlide.is-active{
-      position:relative;
-      opacity:1;
-      transform: translateY(0);
-      pointer-events:auto;
-    }
-    @media (prefers-reduced-motion: reduce){
-      #reviewSlider .reviewSlide{ transition:none !important; }
-    }
-  `;
-  document.head.appendChild(css);
+  if (!slides.length || !prev || !next || !dots.length) return;
 
   let i = 0;
   let t = null;
 
   function setDot(active){
     dots.forEach((d, idx) => {
-      d.style.background = idx === active ? 'rgba(0,0,0,.7)' : 'rgba(0,0,0,.22)';
+      d.classList.toggle('is-active', idx === active);
     });
   }
 
@@ -393,12 +361,19 @@
   }
 
   function stop(){
-    if(t) clearInterval(t);
+    if (t) clearInterval(t);
     t = null;
   }
 
-  prev.addEventListener('click', () => { go(i - 1); start(); });
-  next.addEventListener('click', () => { go(i + 1); start(); });
+  prev.addEventListener('click', () => {
+    go(i - 1);
+    start();
+  });
+
+  next.addEventListener('click', () => {
+    go(i + 1);
+    start();
+  });
 
   dots.forEach(d => {
     d.addEventListener('click', () => {
@@ -410,7 +385,6 @@
   slider.addEventListener('mouseenter', stop);
   slider.addEventListener('mouseleave', start);
 
-  // init: zet alleen eerste zichtbaar
   slides.forEach((s, idx) => s.classList.toggle('is-active', idx === 0));
   setDot(0);
   start();
