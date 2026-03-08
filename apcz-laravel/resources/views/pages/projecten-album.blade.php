@@ -1,6 +1,9 @@
 @extends('layouts.app')
 
-@section('title', 'Projecten — ' . $albumTitle . ' — APCZ')
+@section('title', $albumTitle . ' projecten in Zaandam | APCZ')
+@section('meta_description', $albumTitle . ' projecten in Zaandam en Zaanstad bekijken? Bekijk echte resultaten van Auto Poets Centrale Zaanstad op het gebied van ' . strtolower($albumTitle) . ', auto detailing, showroomklaar maken en professionele autoverzorging voor klanten uit Zaandam, Wormerveer, Assendelft, Koog aan de Zaan, Krommenie, Purmerend en Amsterdam.')
+@section('meta_keywords', strtolower($albumTitle) . ' zaandam, ' . strtolower($albumTitle) . ' projecten, auto detailing zaandam, autopoetsbedrijf zaanstad, showroomklaar maken, autodetailing purmerend')
+@section('canonical', url()->current())
 
 @section('content')
 
@@ -8,7 +11,7 @@
   <div class="container">
     <div class="page-hero__inner reveal">
       <div class="page-hero__kicker">Projecten • Album • Resultaten</div>
-      <h1 class="page-hero__title">Album: {{ $albumTitle }}</h1>
+      <h1 class="page-hero__title">{{ $albumTitle }} projecten in Zaandam</h1>
       <p class="page-hero__lead">
         {{ $albumDescription }}
         Nieuwe foto’s voegen wij doorlopend toe. Staat jouw type klus er nog niet tussen,
@@ -17,7 +20,6 @@
 
       <div class="page-hero__cta">
         <a class="btn btn--dark" href="{{ route('projecten') }}">Terug naar projecten</a>
-        <a class="btn btn--primary" href="{{ route('contact') }}">Neem contact op</a>
       </div>
     </div>
   </div>
@@ -29,10 +31,11 @@
     <div class="card reveal" style="max-width:1100px; margin:0 auto 22px;">
       <div class="card__body" style="padding:30px 28px;">
         <div class="center stack">
-          <span class="badge">Projectalbum • {{ $albumTitle }}</span>
+          <div style="width:120px; height:4px; margin:0 auto 6px; border-radius:999px; background:linear-gradient(90deg,#f4c400,#ffe27a,#fff4cb);"></div>
           <p class="p section-intro">
-            Deze pagina laat voorbeelden zien van eerder uitgevoerde werkzaamheden binnen het album <b>{{ $albumTitle }}</b>.
-            Zo krijg je een beter beeld van het type behandeling, de afwerking en het resultaat dat wij nastreven.
+            In dit album zie je voorbeelden van eerder uitgevoerde werkzaamheden binnen
+            <b>{{ $albumTitle }}</b>. Zo krijg je een beter beeld van de behandeling,
+            de afwerking en het resultaat dat wij nastreven.
           </p>
         </div>
       </div>
@@ -43,10 +46,29 @@
         @foreach($images as $src)
           <div class="card">
             <div class="card__media">
-              <img src="{{ $src }}" alt="Projectfoto {{ $albumTitle }}" loading="lazy">
+              <img src="{{ $src }}" alt="{{ $albumTitle }} projectfoto van Auto Poets Centrale Zaanstad" loading="lazy">
             </div>
           </div>
         @endforeach
+      </div>
+
+      <div class="card reveal" style="margin-top:24px;">
+        <div class="card__body">
+          <div class="center stack">
+            <h2 class="h2" style="margin-bottom:0;">{{ $albumTitle }} in Zaandam en omgeving</h2>
+            <p class="p section-intro">
+              Deze projectfoto’s laten zien hoe wij voertuigen behandelen voor klanten uit
+              Zaandam, Zaanstad, Wormerveer, Assendelft, Koog aan de Zaan, Krommenie,
+              Purmerend en Amsterdam. Zo krijg je een realistisch beeld van onze werkwijze,
+              afwerking en het niveau dat wij nastreven.
+            </p>
+            <p class="p section-intro">
+              Zoek je voorbeelden van <b>{{ strtolower($albumTitle) }}</b>, auto detailing,
+              showroomklaar maken of professionele autoverzorging? Dan geeft dit album een goed beeld
+              van wat er in de praktijk mogelijk is.
+            </p>
+          </div>
+        </div>
       </div>
 
       <div class="card reveal" style="margin-top:24px;">
@@ -69,7 +91,7 @@
         @for($i = 1; $i <= 12; $i++)
           <div class="card">
             <div class="card__media">
-              <img src="{{ $albumCover }}" alt="Placeholder {{ $i }} voor {{ $albumTitle }}" loading="lazy">
+              <img src="{{ $albumCover }}" alt="Placeholder {{ $i }} voor {{ $albumTitle }} album" loading="lazy">
             </div>
             <div class="card__body">
               <div class="card__title">{{ $albumTitle }} — voorbeeld {{ $i }}</div>

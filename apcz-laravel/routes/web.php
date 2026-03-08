@@ -41,3 +41,27 @@ Route::get('/faq', fn() => view('pages.faq'))->name('faq');
 // route voor fotostudio
 
 Route::view('/fotostudio', 'pages.fotostudio')->name('fotostudio');
+
+
+// voor seo pages
+
+
+Route::view('/auto-laten-poetsen-zaandam', 'pages.auto-laten-poetsen-zaandam')->name('seo.zaandam');
+
+Route::view('/auto-detailing-zaandam', 'pages.auto-detailing-zaandam')->name('seo.detailing.zaandam');
+
+Route::get('/auto-laten-poetsen-wormerveer', function () {
+    return view('pages.seo-city', ['city' => 'Wormerveer']);
+})->name('seo.wormerveer');
+
+Route::get('/auto-laten-poetsen-purmerend', function () {
+    return view('pages.seo-city', ['city' => 'Purmerend']);
+})->name('seo.purmerend');
+
+Route::get('/auto-laten-poetsen-assendelft', function () {
+    return view('pages.seo-city', ['city' => 'Assendelft']);
+})->name('seo.assendelft');
+
+Route::get('/auto-laten-poetsen-amsterdam', function () {
+    return view('pages.seo-city', ['city' => 'Amsterdam']);
+})->name('seo.amsterdam');

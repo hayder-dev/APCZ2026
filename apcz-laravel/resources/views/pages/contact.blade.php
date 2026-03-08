@@ -1,6 +1,9 @@
 @extends('layouts.app')
 
-@section('title','Contact — Auto Poets Centrale Zaanstad')
+@section('title', 'Contact | Auto laten poetsen in Zaandam - APCZ')
+@section('meta_description', 'Neem contact op met Auto Poets Centrale Zaanstad voor auto laten poetsen in Zaandam, auto detailing, showroomklaar maken, zakelijke autoverzorging en offerte of afspraak in Zaanstad en omgeving.')
+@section('meta_keywords', 'contact autopoetsbedrijf zaandam, auto laten poetsen zaandam, auto detailing zaanstad, showroomklaar maken contact, zakelijke autopoetsservice, offerte autopoetsen')
+@section('canonical', url('/contact'))
 
 @section('content')
 
@@ -10,14 +13,10 @@
       <div class="page-hero__kicker">Contact • Offerte • Afspraak</div>
       <h1 class="page-hero__title">Plan je afspraak of vraag een offerte aan</h1>
       <p class="page-hero__lead">
-        Breng je de auto in de ochtend rond 08:00 bij ons langs, dan hebben wij alle tijd om deze zorgvuldig onder handen te nemen.
-        In de meeste gevallen is de auto <b>dezelfde dag weer klaar</b> om opgehaald te worden.
-        Zo kun je hem later op de dag weer lekker fris en fruitig in topconditie meenemen.
+        Breng je de auto in de ochtend rond <b>08:00</b> bij ons langs, dan hebben wij alle tijd om deze zorgvuldig te behandelen.
+        In veel gevallen is het voertuig <b>dezelfde dag weer klaar</b> om opgehaald te worden.
+        Zo kun je later op de dag weer op pad met een auto die schoon, verzorgd en representatief is afgewerkt.
       </p>
-
-      <div class="page-hero__cta">
-
-      </div>
     </div>
   </div>
 </section>
@@ -54,11 +53,14 @@
         <div class="card__body">
 
           <div class="stack">
-            <div class="card__title">Offerte / afspraak aanvragen</div>
+            <div class="card__title">Offerte of afspraak aanvragen</div>
             <p class="card__text" style="opacity:.86;">
-              Plan eenvoudig een afspraak door hieronder je gegevens in te vullen.
-Heb je een pakket gekozen? Dan worden jouw gekozen pakket en  extra’s automatisch toegevoegd aan de aanvraag.
-Vul indien mogelijk ook het kenteken van je voertuig in. Zo kunnen wij direct zien om welk type auto en bouwjaar het gaat, zodat wij de juiste behandeling en indicatie kunnen voorbereiden.
+              Vul hieronder je gegevens in om eenvoudig een afspraak of offerte aan te vragen.
+              Heb je al een pakket gekozen? Dan worden jouw geselecteerde pakket en eventuele extra’s automatisch meegenomen in de aanvraag.
+            </p>
+            <p class="card__text" style="opacity:.86;">
+              Vul indien mogelijk ook het kenteken van je voertuig in. Zo kunnen wij direct zien om welk type auto en bouwjaar het gaat,
+              zodat we de behandeling beter kunnen inschatten en je gerichter kunnen helpen.
             </p>
           </div>
 
@@ -138,9 +140,9 @@ Vul indien mogelijk ook het kenteken van je voertuig in. Zo kunnen wij direct zi
                   style="opacity:.9;"
                 >
               </div>
-              
+
               <input type="hidden" name="pakket" value="{{ $pakketVal }}">
-             
+
               <div style="grid-column:span 2;">
                 <label class="card__text"><b>Bericht*</b></label>
                 <textarea
@@ -156,11 +158,10 @@ Vul indien mogelijk ook het kenteken van je voertuig in. Zo kunnen wij direct zi
 
             <div class="action-row action-row--center" style="margin-top:18px;">
               <button class="btn btn--primary" type="submit">Verstuur aanvraag</button>
-              </a>
             </div>
 
             <p class="card__text" style="opacity:.75; margin-top:14px; margin-bottom:0;">
-              <b>Let op:</b> Wij doen ons best om zo snel mogelijk te reageren. Door drukte kan dit soms wat langer duren dan gebruikelijk.
+              <b>Let op:</b> Wij doen ons best om zo snel mogelijk te reageren. Door drukte kan een reactie soms iets langer duren dan gebruikelijk.
             </p>
           </form>
         </div>
@@ -212,19 +213,30 @@ Vul indien mogelijk ook het kenteken van je voertuig in. Zo kunnen wij direct zi
       </div>
 
     </div>
+
+    <div class="card reveal" style="margin-top:24px;">
+      <div class="card__body">
+        <div class="center stack">
+          <h2 class="h2" style="margin-bottom:0;">Autopoetsbedrijf in Zaandam en omgeving</h2>
+          <p class="p section-intro">
+            Auto Poets Centrale Zaanstad helpt klanten uit <b>Zaandam</b>, <b>Zaanstad</b>,
+            <b>Wormerveer</b>, <b>Assendelft</b>, <b>Koog aan de Zaan</b>, <b>Krommenie</b>,
+            <b>Westzaan</b>, <b>Oostzaan</b>, <b>Purmerend</b> en <b>Amsterdam</b> met auto laten poetsen,
+            auto detailing, showroomklaar maken, autofotografie en zakelijke autoverzorging.
+          </p>
+          <p class="p section-intro">
+            Wil je een afspraak maken of eerst overleggen wat het beste past bij jouw voertuig? Neem gerust contact op,
+            dan denken wij met je mee over de juiste aanpak en planning.
+          </p>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
 <script>
 (function () {
-  const extrasInput   = document.getElementById('extrasInput');
-  const extrasPreview = document.getElementById('extrasPreview');
-
-  if (extrasInput && extrasPreview) {
-    const val = (extrasInput.value || '').trim();
-    extrasPreview.value = val ? val.split(',').map(s => s.trim()).filter(Boolean).join(', ') : '';
-  }
-
   const kentekenInput = document.getElementById('kentekenInput');
   const modelInput    = document.getElementById('modelInput');
   const rdwBtn        = document.getElementById('rdwBtn');

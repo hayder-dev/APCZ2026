@@ -1,23 +1,24 @@
 <footer class="footer">
   <div class="container footer__grid">
     <div class="footer__col">
-      <h3>APCZ</h3>
+      <h3>Auto Poets Centrale Zaanstad</h3>
       <p class="footer__text">
-        Auto Poets Centrale Zaanstad<br>
-        Sinds 2003 • Zaanstad & Randstad
+        Specialist in <strong>auto laten poetsen</strong>, <strong>auto detailing</strong>,
+        <strong>showroomklaar maken</strong>, <strong>fotostudio</strong> en
+        <strong>zakelijke autoverzorging</strong> in Zaandam en Zaanstad.
       </p>
-
-      <div class="footer__buttons">
-        <a class="btn btn--outline" href="https://wa.me/31649777080" target="_blank" rel="noopener">WhatsApp</a>
-        <a class="btn btn--primary" href="{{ route('contact') }}">Afspraak plannen</a>
-      </div>
+      <p class="footer__text">
+        Wij werken voor klanten uit <strong>Zaandam</strong>, <strong>Zaanstad</strong>,
+        <strong>Wormerveer</strong>, <strong>Assendelft</strong>, <strong>Koog aan de Zaan</strong>,
+        <strong>Krommenie</strong>, <strong>Purmerend</strong> en <strong>Amsterdam</strong>.
+      </p>
     </div>
 
     <div class="footer__col">
       <h3>Contact</h3>
       <p class="footer__text">
         <strong>Telefoon:</strong> <a href="tel:+31649777080">06 - 49777080</a><br>
-        <strong>E-mail:</strong> <a href="mailto:boekingen@apczaanstad.nl">boekingen@apczaanstad.nl</a><br>
+        <strong>E-mail:</strong> <a href="mailto:info@apczaanstad.nl">info@apczaanstad.nl</a><br>
         <strong>Locatie:</strong> Zijtocht 1, 1507 CD Zaandam
       </p>
     </div>
@@ -36,7 +37,9 @@
       <ul class="footer__links">
         <li><a href="{{ route('diensten') }}">Pakketten</a></li>
         <li><a href="{{ route('projecten') }}">Projecten</a></li>
+        <li><a href="{{ route('fotostudio') }}">Fotostudio</a></li>
         <li><a href="{{ route('over') }}">Over ons</a></li>
+        <li><a href="{{ route('faq') }}">FAQ</a></li>
         <li><a href="{{ route('contact') }}">Contact</a></li>
       </ul>
     </div>
@@ -53,9 +56,3 @@
     </div>
   </div>
 </footer>
-
-<div class="whatsapp">
-  <a href="https://wa.me/31649777080" target="_blank" rel="noopener">
-    WhatsApp
-  </a>
-</div>

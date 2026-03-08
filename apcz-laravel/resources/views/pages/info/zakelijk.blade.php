@@ -1,6 +1,9 @@
 @extends('layouts.app')
 
-@section('title','Wagenpark & zakelijk — APCZ')
+@section('title', 'Wagenpark reinigen in Zaandam | Zakelijke autopoetsservice APCZ')
+@section('meta_description', 'Wagenpark reinigen in Zaandam en Zaanstad? Auto Poets Centrale Zaanstad helpt bedrijven met zakelijke autopoetsservice, periodiek onderhoud, bedrijfsauto poetsen, leaseauto reiniging en representatieve oplevering voor klanten uit Zaandam, Wormerveer, Assendelft, Koog aan de Zaan, Krommenie, Purmerend en Amsterdam.')
+@section('meta_keywords', 'wagenpark reinigen zaandam, zakelijke autopoetsservice zaanstad, bedrijfsauto poetsen zaandam, leaseauto reinigen, servicebus reinigen, wagenpark onderhoud purmerend, autodetailing amsterdam zakelijk')
+@section('canonical', url('/wagenpark-zakelijk'))
 
 @section('content')
 
@@ -8,17 +11,12 @@
   <div class="container">
     <div class="page-hero__inner reveal">
       <div class="page-hero__kicker">Zakelijk • Wagenpark • Periodiek onderhoud</div>
-      <h1 class="page-hero__title">Wagenpark & zakelijk</h1>
+      <h1 class="page-hero__title">Wagenpark reinigen & zakelijke autopoetsservice</h1>
       <p class="page-hero__lead">
         Een representatief wagenpark is een visitekaartje. Auto Poets Centrale Zaanstad helpt bedrijven met
         periodiek onderhoud, vaste afspraken en een snelle doorlooptijd — zodat voertuigen altijd strak voor de dag komen,
-        zonder dat het jouw planning in de weg zit.
+        zonder dat het jouw planning in de weg zit. Wij werken voor bedrijven uit Zaandam, Zaanstad en omgeving.
       </p>
-
-      <div class="page-hero__cta">
-        <a class="btn btn--dark" href="#wat-we-doen">Meer informatie</a>
-        <a class="btn btn--primary" href="{{ route('contact') }}">Neem contact op</a>
-      </div>
     </div>
   </div>
 </section>
@@ -29,6 +27,8 @@
     <div class="card reveal" style="max-width:1100px; margin:0 auto 22px;">
       <div class="card__body" style="padding:30px 28px;">
         <div class="center stack">
+          <div style="width:120px; height:4px; margin:0 auto 6px; border-radius:999px; background:linear-gradient(90deg,#f4c400,#ffe27a,#fff4cb);"></div>
+
           <p class="p section-intro">
             Voor zakelijke voertuigen draait het om representativiteit, continuïteit en betrouwbaarheid.
             Of het nu gaat om servicebussen, leaseauto’s, poolauto’s of directiewagens:
@@ -61,7 +61,7 @@
       <div>
         <img
           src="{{ asset('assets/img/info-zakelijk.jpg') }}"
-          alt="Wagenpark en zakelijke voertuigen"
+          alt="Wagenpark reinigen en zakelijke voertuigen in Zaandam"
           style="border-radius:24px; border:1px solid rgba(0,0,0,.10); box-shadow:0 26px 90px rgba(0,0,0,.14);"
         >
       </div>
@@ -151,19 +151,51 @@
 
     <div class="card reveal" style="margin-top:24px;">
       <div class="card__body">
-        <div class="card__title">Planning & oplevering</div>
-        <p class="card__text" style="margin-top:10px;">
-          In veel gevallen geldt: lever je een voertuig om <b>08:00</b> in, dan kan het <b>dezelfde dag</b> weer mee terug.
-          Wij zijn geopend tot <b>17:00</b>. Bij meerdere voertuigen stemmen wij de planning af op jouw bedrijfsproces,
-          zodat de inzetbaarheid van je wagenpark zoveel mogelijk behouden blijft.
-        </p>
-        <p class="card__text" style="margin-bottom:0;">
-          Waar nodig kunnen we werken met vaste dagen, vaste slots en duidelijke prioriteiten voor voertuigen
-          die direct inzetbaar moeten blijven.
-        </p>
+        <div class="center stack">
+          <h2 class="h2">Planning & oplevering</h2>
+          <p class="p section-intro">
+            In veel gevallen geldt: lever je een voertuig om <b>08:00</b> in, dan kan het <b>dezelfde dag</b> weer mee terug.
+            Wij zijn geopend tot <b>17:00</b>. Bij meerdere voertuigen stemmen wij de planning af op jouw bedrijfsproces,
+            zodat de inzetbaarheid van je wagenpark zoveel mogelijk behouden blijft.
+          </p>
+          <p class="p section-intro">
+            Waar nodig kunnen we werken met vaste dagen, vaste slots en duidelijke prioriteiten voor voertuigen
+            die direct inzetbaar moeten blijven.
+          </p>
+        </div>
       </div>
     </div>
 
+  </div>
+</section>
+
+<section class="section section--white seo-block" id="lokale-seo-zakelijk">
+  <div class="container">
+    <div class="center stack reveal">
+      <h2 class="h2">Zakelijke autopoetsservice in Zaandam en omgeving</h2>
+      <p class="p section-intro">
+        Zoek je een partner voor <b>wagenpark reinigen in Zaandam</b> of een vaste
+        <b>zakelijke autopoetsservice in Zaanstad</b>? Wij helpen bedrijven met een praktische,
+        representatieve en planbare aanpak.
+      </p>
+    </div>
+
+    <div class="stack reveal" style="max-width:980px; margin:0 auto;">
+      <p class="p">
+        Auto Poets Centrale Zaanstad werkt voor bedrijven uit <b>Zaandam</b>, <b>Zaanstad</b>,
+        <b>Wormerveer</b>, <b>Assendelft</b>, <b>Koog aan de Zaan</b>, <b>Krommenie</b>,
+        <b>Westzaan</b>, <b>Oostzaan</b>, <b>Purmerend</b> en <b>Amsterdam</b>. Wij reinigen en onderhouden
+        bedrijfsauto’s, leaseauto’s, servicewagens, poolauto’s en directievoertuigen met focus op uitstraling,
+        continuïteit en duidelijke afspraken.
+      </p>
+
+      <p class="p">
+        Of je nu een klein wagenpark hebt of meerdere voertuigen per week inzet:
+        wij denken mee over frequentie, doorlooptijd en de juiste aanpak. Daarmee is deze pagina relevant voor
+        bedrijven die zoeken op termen als <b>bedrijfsauto poetsen</b>, <b>leaseauto reinigen</b>,
+        <b>wagenpark onderhoud</b> en <b>zakelijke autodetailing</b> in de regio Zaandam.
+      </p>
+    </div>
   </div>
 </section>
 
@@ -173,8 +205,8 @@
     <div class="split reveal">
       <div>
         <img
-          src="{{ asset('assets/img/hero-5.jfif') }}"
-          alt="Zakelijke samenwerking en planning"
+          src="{{ asset('assets/img/info-zakelijk-1.jpg') }}"
+          alt="Zakelijke samenwerking en planning voor wagenpark"
           style="border-radius:24px; border:1px solid rgba(0,0,0,.10); box-shadow:0 26px 90px rgba(0,0,0,.14);"
         >
       </div>
@@ -256,7 +288,6 @@
             Dan kijken wij welke structuur het beste past bij jouw wagenpark.
           </p>
           <div class="action-row action-row--center" style="margin-top:8px;">
-            <a class="btn btn--dark" href="{{ route('info.index') }}">Terug</a>
             <a class="btn btn--dark" href="{{ route('diensten') }}#pakketten">Bekijk pakketten</a>
             <a class="btn btn--primary" href="{{ route('contact') }}?route=wagenpark-zakelijk">Neem contact op</a>
           </div>

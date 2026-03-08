@@ -1,6 +1,9 @@
 @extends('layouts.app')
 
-@section('title','Fotostudio & verkooppresentatie — APCZ')
+@section('title', 'Auto fotostudio in Zaandam | Professionele autofotografie APCZ')
+@section('meta_description', 'Auto fotostudio in Zaandam en Zaanstad voor professionele autofotografie, auto foto’s voor verkoop, advertentie-klare presentatie en showroombeelden. Auto Poets Centrale Zaanstad helpt particulieren, dealers en handelaren uit Zaandam, Wormerveer, Assendelft, Koog aan de Zaan, Krommenie, Purmerend en Amsterdam.')
+@section('meta_keywords', 'auto fotostudio zaandam, autofotografie zaanstad, auto foto’s voor verkoop, fotostudio auto advertentie, professionele autofotografie purmerend, showroom fotografie amsterdam, verkooppresentatie auto')
+@section('canonical', url('/fotostudio'))
 
 @section('content')
 
@@ -8,15 +11,12 @@
   <div class="container">
     <div class="page-hero__inner reveal">
       <div class="page-hero__kicker">Fotostudio • Verkooppresentatie • Advertentie-klaar</div>
-      <h1 class="page-hero__title">Fotostudio & verkooppresentatie</h1>
+      <h1 class="page-hero__title">Auto fotostudio & verkooppresentatie in Zaandam</h1>
       <p class="page-hero__lead">
         Een nette auto verkoopt beter, maar goede presentatie maakt het verschil. Na het reinigen en showroomklaar maken
         verzorgen wij ook professionele foto’s met een rustige uitstraling, strakke belichting en een presentatie die direct vertrouwen geeft.
+        Wij helpen klanten uit Zaandam, Zaanstad en omgeving met advertentie-klare autofotografie.
       </p>
-
-      <div class="page-hero__cta">
-        <a class="btn btn--dark" href="#wat-we-doen">Meer informatie</a>
-      </div>
     </div>
   </div>
 </section>
@@ -27,10 +27,18 @@
     <div class="card reveal" style="max-width:1100px; margin:0 auto 22px;">
       <div class="card__body" style="padding:30px 28px;">
         <div class="center stack">
-          <span class="badge">Fotostudio • Showroom • Verkoopklaar</span>
+          <div style="width:120px; height:4px; margin:0 auto 6px; border-radius:999px; background:linear-gradient(90deg,#f4c400,#ffe27a,#fff4cb);"></div>
+
           <p class="p section-intro">
             Bij Auto Poets Centrale Zaanstad kijken we niet alleen naar hoe een auto wordt gereinigd,
-            maar ook naar hoe hij wordt gepresenteerd. Want een verzorgde uitstraling verdient beelden die datzelfde niveau uitstralen.
+            maar ook naar hoe hij wordt gepresenteerd. Een verzorgde uitstraling verdient namelijk beelden
+            die datzelfde niveau uitstralen.
+          </p>
+
+          <p class="p section-intro">
+            Daarom combineren wij afwerking en presentatie in één geheel: eerst zorgen wij dat het voertuig
+            er netjes en representatief bij staat, daarna leggen wij het professioneel vast voor advertentie,
+            showroom of verkoop.
           </p>
         </div>
       </div>
@@ -42,8 +50,8 @@
         <h2 class="h2">Beelden die verkoop en presentatie versterken</h2>
         <p class="p">
           Een voertuig dat netjes gefotografeerd is, komt professioneler over en trekt sneller de aandacht.
-          Zeker bij verkoop is de eerste indruk vaak al online. Daarom zorgen wij voor foto’s die rustig, strak
-          en overtuigend ogen.
+          Zeker bij verkoop is de eerste indruk vaak al online. Daarom zorgen wij voor foto’s die rustig,
+          strak en overtuigend ogen.
         </p>
         <p class="p">
           De combinatie van reiniging, afwerking en fotografie maakt het totaalplaatje compleet. Daardoor oogt
@@ -59,8 +67,8 @@
 
       <div>
         <img
-          src="{{ asset('assets/img/studio.svg') }}"
-          alt="Fotostudio en verkooppresentatie"
+          src="{{ asset('assets/img/fotostudio-11.jpg') }}"
+          alt="Auto fotostudio en verkooppresentatie in Zaandam"
           style="border-radius:24px; border:1px solid rgba(0,0,0,.10); box-shadow:0 26px 90px rgba(0,0,0,.14);"
         >
       </div>
@@ -96,6 +104,37 @@
           </p>
         </div>
       </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section section--white seo-block" id="lokale-seo-fotostudio">
+  <div class="container">
+
+    <div class="center stack reveal">
+      <h2 class="h2">Professionele autofotografie in Zaandam en omgeving</h2>
+      <p class="p section-intro">
+        Zoek je een <b>auto fotostudio in Zaandam</b> of professionele <b>autofotografie in Zaanstad</b>?
+        Auto Poets Centrale Zaanstad helpt particulieren, dealers en handelaren met rustige,
+        nette en advertentie-klare presentatie van voertuigen.
+      </p>
+    </div>
+
+    <div class="stack reveal" style="max-width:980px; margin:0 auto;">
+      <p class="p">
+        Wij werken voor klanten uit <b>Zaandam</b>, <b>Zaanstad</b>, <b>Wormerveer</b>,
+        <b>Assendelft</b>, <b>Koog aan de Zaan</b>, <b>Krommenie</b>, <b>Westzaan</b>,
+        <b>Oostzaan</b>, <b>Purmerend</b> en <b>Amsterdam</b>. Of het nu gaat om een particuliere verkoop,
+        dealeradvertentie of professionele voorraadpresentatie: wij zorgen voor beelden die vertrouwen wekken
+        en de auto duidelijk laten uitkomen.
+      </p>
+
+      <p class="p">
+        Daarmee is deze pagina relevant voor zoekopdrachten zoals <b>auto foto’s voor verkoop</b>,
+        <b>fotostudio auto advertentie</b>, <b>professionele autofotografie</b> en
+        <b>verkooppresentatie auto</b> in de regio Zaandam.
+      </p>
     </div>
 
   </div>
@@ -143,14 +182,16 @@
 
     <div class="card reveal" style="margin-top:24px;">
       <div class="card__body">
-        <div class="card__title">Veelgekozen combinatie</div>
-        <p class="card__text" style="margin-top:10px;">
-          Fotostudio wordt vaak gecombineerd met showroomafwerking of het <b>Goud+</b> pakket.
-          Dat is logisch: eerst zorgen wij dat het voertuig er strak bij staat, daarna leggen we het professioneel vast.
-        </p>
-        <p class="card__text" style="margin-bottom:0;">
-          Zo krijg je niet alleen een schone auto, maar een compleet verkoopklaar resultaat.
-        </p>
+        <div class="center stack">
+          <h2 class="h2">Veelgekozen combinatie</h2>
+          <p class="p section-intro">
+            Fotostudio wordt vaak gecombineerd met showroomafwerking of het <b>Goud+</b> pakket.
+            Dat is logisch: eerst zorgen wij dat het voertuig er strak bij staat, daarna leggen we het professioneel vast.
+          </p>
+          <p class="p section-intro">
+            Zo krijg je niet alleen een schone auto, maar een compleet verkoopklaar resultaat.
+          </p>
+        </div>
       </div>
     </div>
 
@@ -163,8 +204,8 @@
     <div class="split reveal">
       <div>
         <img
-          src="{{ asset('assets/img/hero-4.jfif') }}"
-          alt="Showroom en verkoopfotografie"
+          src="{{ asset('assets/img/fotostudio-1.jpg') }}"
+          alt="Showroom en verkoopfotografie voor auto’s"
           style="border-radius:24px; border:1px solid rgba(0,0,0,.10); box-shadow:0 26px 90px rgba(0,0,0,.14);"
         >
       </div>

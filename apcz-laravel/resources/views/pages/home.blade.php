@@ -1,6 +1,9 @@
 @extends('layouts.app')
 
-@section('title','Auto Poets Centrale Zaanstad — Detailing • Coatings • Showroom')
+@section('title', 'Auto laten poetsen in Zaandam | Auto Poets Centrale Zaanstad')
+@section('meta_description', 'Auto laten poetsen in Zaandam of Zaanstad? Auto Poets Centrale Zaanstad is specialist in auto detailing, showroomklaar maken, interieurreiniging en professionele autoverzorging voor klanten uit Zaandam, Wormerveer, Assendelft, Koog aan de Zaan, Krommenie, Purmerend en Amsterdam.')
+@section('meta_keywords', 'auto laten poetsen zaandam, autopoetsbedrijf zaanstad, auto detailing zaandam, showroomklaar maken zaandam, auto poetsen wormerveer, auto poetsen assendelft, auto detailing purmerend, auto reinigen amsterdam')
+@section('canonical', url('/'))
 
 @section('content')
 
@@ -19,14 +22,14 @@
         <div class="kicker">Sinds 2003 • Zaanstad & Randstad</div>
 
         <h1 class="h1">
-          Detailing met uitstraling.<br/>
-          Afwerking op showroomniveau.
+          Auto laten poetsen in Zaandam met showroom uitstraling.<br/>
         </h1>
 
         <p class="lead">
           Bij Auto Poets Centrale Zaanstad draait het niet om “even snel schoon”.
-          Wij werken nauwkeurig en met vaste stappen, zodat jouw auto er strak uitziet én verzorgd aanvoelt —
-          van lak tot interieur, met aandacht voor elk detail.
+          Wij zijn gespecialiseerd in auto laten poetsen, auto detailing, interieurreiniging en
+          showroomklaar maken voor klanten uit Zaandam, Zaanstad en omgeving.
+          Van lak tot interieur werken wij nauwkeurig, veilig en met oog voor elk detail.
         </p>
 
         <div class="usps">
@@ -41,7 +44,8 @@
         </div>
 
         <div class="card__text home-tip">
-          Tip: lever je auto om <b>08:00</b> in — in de meeste gevallen kun je ‘m <b>dezelfde dag</b> weer ophalen (open tot <b>17:00</b>).
+          Tip: lever je auto om <b>08:00</b> in — in veel gevallen kun je deze <b>dezelfde dag</b> weer ophalen
+          (wij zijn geopend tot <b>17:00</b>).
         </div>
       </div>
     </div>
@@ -55,8 +59,8 @@
     <h2 class="h2">5-sterren ervaring. Elke keer opnieuw.</h2>
 
     <p class="p reviews-intro">
-      Klanten kiezen ons om één reden: <b>consistentie</b>. Geen half werk — maar een afwerking die klopt.
-      Wij leveren een nette uitstraling, frisse cabine en een lakbeeld dat je met vertrouwen kunt laten zien.
+      Klanten kiezen ons om één reden: <b>consistentie</b>. Geen half werk, maar een afwerking die klopt.
+      Wij leveren een nette uitstraling, een frisse cabine en een lakbeeld dat je met vertrouwen kunt laten zien.
     </p>
 
     <div class="review-card review-card--home">
@@ -110,21 +114,21 @@
     <div class="center stack">
       <h2 class="h2">Wat wil je laten doen?</h2>
       <p class="p section-intro">
-        Kies de route die bij je past. Van een snelle opfrisbeurt tot complete showroom-afwerking (eventueel met foto’s).
+        Kies de route die bij je past. Van een opfrisbeurt tot complete showroom-afwerking,
+        eventueel aangevuld met professionele foto’s.
       </p>
     </div>
 
     <div class="grid-3 route-grid">
       <div class="card">
         <div class="card__media">
-          <img src="{{ asset('assets/img/service-auto.jpg') }}" alt="Auto laten poetsen"/>
+          <img src="{{ asset('assets/img/service-auto.jpg') }}" alt="Auto laten poetsen in Zaandam"/>
         </div>
         <div class="card__body">
           <div class="card__title">Auto laten poetsen</div>
           <p class="card__text">
             Voor dagelijks gebruik én liefhebbers die hun auto netjes en verzorgd willen houden.
-            Wij zorgen voor een frisse uitstraling, strakke details en een representatieve finish — zonder onnodige poespas.
-            Ideaal als je auto “gewoon strak” moet zijn, voor werk, weekend of verkoopvoorbereiding.
+            Wij zorgen voor een frisse uitstraling, strakke details en een representatieve finish.
           </p>
           <a class="btn btn--dark" href="{{ route('info.auto') }}">Meer info</a>
         </div>
@@ -132,14 +136,13 @@
 
       <div class="card">
         <div class="card__media">
-          <img src="{{ asset('assets/img/info-dealers.jpg') }}" alt="Dealers & showroom"/>
+          <img src="{{ asset('assets/img/info-dealers.jpg') }}" alt="Dealers en showroomklaar maken"/>
         </div>
         <div class="card__body">
           <div class="card__title">Dealers & showroom</div>
           <p class="card__text">
             Verkoopklare presentatie met focus op detail en consistentie.
-            Van showroomstaat tot complete aflever-ready afwerking — inclusief strak interieur, diepe glans en nette finishing.
-            Ook geschikt voor grotere aantallen voertuigen en dealerpartijen, met optioneel professionele foto’s voor advertenties.
+            Ideaal voor showroomauto’s, afleverklare voertuigen en dealerpartijen.
           </p>
           <a class="btn btn--dark" href="{{ route('info.dealers') }}">Meer info</a>
         </div>
@@ -147,18 +150,44 @@
 
       <div class="card">
         <div class="card__media">
-          <img src="{{ asset('assets/img/info-zakelijk.jpg') }}" alt="Wagenpark & zakelijk"/>
+          <img src="{{ asset('assets/img/info-zakelijk.jpg') }}" alt="Wagenpark en zakelijke autopoetsservice"/>
         </div>
         <div class="card__body">
           <div class="card__title">Wagenpark & zakelijk</div>
           <p class="card__text">
             Houd je wagenpark representatief richting klanten en medewerkers.
-            Wij werken met <b>vaste afspraken</b>, een <b>snelle doorlooptijd</b> en <b>periodiek onderhoud</b> zodat je voertuigen altijd strak voor de dag komen.
-            Perfect voor <b>bedrijfsauto’s</b>, <b>lease</b>, servicebussen en directie-auto’s — met duidelijke planning en heldere afspraken.
+            Met vaste afspraken, snelle doorlooptijd en periodiek onderhoud.
           </p>
           <a class="btn btn--dark" href="{{ route('info.zakelijk') }}">Meer info</a>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+{{-- Lokale SEO tekst --}}
+<section class="section section--white seo-block" id="seo-lokaal">
+  <div class="container reveal">
+    <div class="center stack">
+      <h2 class="h2">Autopoetsbedrijf voor Zaandam, Zaanstad en omgeving</h2>
+      
+      <p class="p section-intro" style="margin-left:auto; margin-right:auto;">
+        Auto Poets Centrale Zaanstad is gespecialiseerd in <strong>auto laten poetsen</strong>,
+        <strong>auto detailing</strong>, <strong>interieurreiniging</strong> en
+        <strong>showroomklaar maken</strong> voor particulieren, dealers en zakelijke klanten.
+      </p>
+
+      <p class="p" style="margin-left:auto; margin-right:auto;">
+        Wij werken voor klanten uit <strong>Zaandam</strong>, <strong>Zaanstad</strong>,
+        <strong>Wormerveer</strong>, <strong>Assendelft</strong>, <strong>Koog aan de Zaan</strong>,
+        <strong>Krommenie</strong>, <strong>Westzaan</strong>, <strong>Oostzaan</strong>,
+        <strong>Purmerend</strong> en <strong>Amsterdam</strong>.
+      </p>
+
+      <p class="p" style="margin-left:auto; margin-right:auto;">
+        Of het nu gaat om dagelijks gebruik, verkoopvoorbereiding, showroomafwerking
+        of zakelijke voertuigen: wij zorgen voor een frisse, verzorgde en representatieve oplevering.
+      </p>
     </div>
   </div>
 </section>
@@ -172,15 +201,15 @@
         <h2 class="h2">Meer dan schoon. Dit is detailing met impact.</h2>
 
         <p class="p">
-          Een goede poetsbeurt zie je direct — maar echte detailing voel je ook.
-          Wij pakken de zichtbare én “lastige” punten aan: randen, kieren, contactpunten, doffe delen en het lakbeeld.
-          Het doel is altijd hetzelfde: een auto die er weer strak en verzorgd bij staat.
+          Een goede poetsbeurt zie je direct, maar echte detailing voel je ook.
+          Wij pakken zichtbare én lastige punten aan: randen, kieren, contactpunten,
+          doffe delen en het lakbeeld.
         </p>
 
         <div class="usps usps--light">
-          <div class="usp usp--light"><b>✓</b>Strak lakbeeld (waar veilig mogelijk)</div>
+          <div class="usp usp--light"><b>✓</b>Strak lakbeeld waar veilig mogelijk</div>
           <div class="usp usp--light"><b>✓</b>Fris interieur met detailafwerking</div>
-          <div class="usp usp--light"><b>✓</b>Duidelijke afspraken & oplevering</div>
+          <div class="usp usp--light"><b>✓</b>Duidelijke afspraken en nette oplevering</div>
         </div>
 
         <div class="action-row">
@@ -190,8 +219,7 @@
       </div>
 
       <div class="media-card">
-        <img src="{{ asset('assets/img/studio-photo.jpg') }}"
-             alt="Fotostudio en verkooppresentatie"/>
+        <img src="{{ asset('assets/img/studio-photo.jpg') }}" alt="Fotostudio en verkooppresentatie in Zaandam"/>
       </div>
     </div>
   </div>
@@ -203,8 +231,7 @@
     <div class="center stack">
       <h2 class="h2">Onze pakketten</h2>
       <p class="p section-intro">
-        6 duidelijke opties — van opfrissen tot complete showroom met foto’s.
-        Klik op “Meer info” voor de volledige inhoud per pakket.
+        Zes duidelijke opties — van opfrissen tot complete showroom-afwerking met foto’s.
       </p>
     </div>
 
@@ -212,7 +239,7 @@
       <div class="card">
         <div class="card__body">
           <div class="card__title">Brons</div>
-          <p class="card__text">Snel fris & representatief. Perfect voor onderhoud.</p>
+          <p class="card__text">Snel fris en representatief. Perfect voor onderhoud.</p>
           <a class="btn btn--dark" href="{{ route('diensten') }}#bronze">Meer info</a>
         </div>
       </div>
@@ -220,7 +247,7 @@
       <div class="card">
         <div class="card__body">
           <div class="card__title">Brons+</div>
-          <p class="card__text">Alles van Brons + wax voor extra glans en bescherming.</p>
+          <p class="card__text">Alles van Brons, plus wax voor extra glans en bescherming.</p>
           <a class="btn btn--dark" href="{{ route('diensten') }}#bronze-wax">Meer info</a>
         </div>
       </div>
@@ -228,7 +255,7 @@
       <div class="card">
         <div class="card__body">
           <div class="card__title">Zilver</div>
-          <p class="card__text">Interieur dieptereiniging + nette afwerking binnen.</p>
+          <p class="card__text">Interieur dieptereiniging met nette afwerking binnen.</p>
           <a class="btn btn--dark" href="{{ route('diensten') }}#silver">Meer info</a>
         </div>
       </div>
@@ -236,7 +263,7 @@
       <div class="card">
         <div class="card__body">
           <div class="card__title">Zilver+</div>
-          <p class="card__text">Exterieur: wassen + 3-staps polijsten + wax.</p>
+          <p class="card__text">Exterieur: wassen, 3-staps polijsten en wax.</p>
           <a class="btn btn--dark" href="{{ route('diensten') }}#exterieur">Meer info</a>
         </div>
       </div>
@@ -244,7 +271,7 @@
       <div class="card">
         <div class="card__body">
           <div class="card__title">Goud</div>
-          <p class="card__text">Showroompakket: interieur + exterieur + motorruimte.</p>
+          <p class="card__text">Showroompakket: interieur, exterieur en motorruimte.</p>
           <a class="btn btn--dark" href="{{ route('diensten') }}#gold">Meer info</a>
         </div>
       </div>
@@ -252,7 +279,7 @@
       <div class="card">
         <div class="card__body">
           <div class="card__title">Goud+</div>
-          <p class="card__text">Alles van Goud + professionele foto’s.</p>
+          <p class="card__text">Alles van Goud, plus professionele foto’s.</p>
           <a class="btn btn--dark" href="{{ route('diensten') }}#platinum">Meer info</a>
         </div>
       </div>
@@ -271,19 +298,18 @@
       <h2 class="h2">Fotostudio & verkooppresentatie</h2>
       <p class="p section-intro">
         Na het reinigen en showroomklaar maken verzorgen we ook de presentatie.
-        Strakke belichting, rustige compositie en detailshots die direct geschikt zijn voor verkoop,
-        advertenties en professionele online plaatsing.
+        Met rustige belichting, strakke compositie en beelden die direct geschikt zijn
+        voor verkoop, advertenties en professionele online plaatsing.
       </p>
-
-      <div class="action-row action-row--center" style="margin-top:8px;">
-        <a class="btn btn--dark" href="{{ route('fotostudio') }}">Meer over fotostudio</a>
-      </div>
     </div>
 
-   <div class="studio-preview" style="max-width:760px; margin:22px auto 0;">
-  <img src="{{ asset('assets/img/studio-photo2.jpg') }}"
-       alt="Fotostudio en verkooppresentatie"/>
-</div>
+    <div class="studio-preview" style="max-width:760px; margin:22px auto 0;">
+      <img src="{{ asset('assets/img/studio-photo2.jpg') }}" alt="Auto fotostudio en verkooppresentatie"/>
+    </div>
+
+    <div class="action-row action-row--center" style="margin-top:8px;">
+      <a class="btn btn--dark" href="{{ route('fotostudio') }}">Meer over de fotostudio</a>
+    </div>
   </div>
 </section>
 
@@ -293,15 +319,15 @@
     <div class="center stack">
       <h2 class="h2">Projecten</h2>
       <p class="p section-intro">
-        Een greep uit ons werk.
+        Een selectie van recente projecten waarin we auto's hebben gereinigd, gepolijst en showroomklaar hebben gemaakt.
       </p>
     </div>
 
     <div class="gallery">
-  <img src="{{ asset('assets/projects/exterieur/01.JPEG') }}" alt="Project 1"/>
-  <img src="{{ asset('assets/projects/showroom/02.JPEG') }}" alt="Project 2"/>
-  <img src="{{ asset('assets/projects/interieur/03.JPEG') }}" alt="Project 3"/>
-</div>
+      <img src="{{ asset('assets/projects/exterieur/01.JPEG') }}" alt="Auto detailing project exterieur"/>
+      <img src="{{ asset('assets/projects/showroom/02.JPEG') }}" alt="Showroomklaar gemaakte auto"/>
+      <img src="{{ asset('assets/projects/interieur/03.JPEG') }}" alt="Interieurreiniging project"/>
+    </div>
 
     <div class="center section-cta">
       <a class="btn btn--primary" href="{{ route('projecten') }}">Meer projecten</a>
@@ -329,8 +355,62 @@
 
 <script>
 (function(){
+  const heroSlider = document.getElementById('heroSlider');
+
+  if (heroSlider) {
+    const rawSlides = (heroSlider.dataset.slides || '')
+      .split(',')
+      .map(s => s.trim())
+      .filter(Boolean);
+
+    const interval = parseInt(heroSlider.dataset.interval || '4600', 10);
+    const alt = heroSlider.dataset.alt || 'APCZ';
+
+    if (rawSlides.length) {
+      rawSlides.forEach((src, index) => {
+        const slide = document.createElement('div');
+        slide.className = 'hero__slide' + (index === 0 ? ' is-active' : '');
+
+        const img = document.createElement('img');
+        img.src = src;
+        img.alt = alt + ' ' + (index + 1);
+        img.loading = index === 0 ? 'eager' : 'lazy';
+
+        slide.appendChild(img);
+        heroSlider.appendChild(slide);
+      });
+
+      const slides = Array.from(heroSlider.querySelectorAll('.hero__slide'));
+      let current = 0;
+      let timer = null;
+
+      const goTo = (nextIndex) => {
+        slides[current].classList.remove('is-active');
+        current = (nextIndex + slides.length) % slides.length;
+        slides[current].classList.add('is-active');
+      };
+
+      const start = () => {
+        stop();
+        if (slides.length > 1) {
+          timer = setInterval(() => goTo(current + 1), interval);
+        }
+      };
+
+      const stop = () => {
+        if (timer) clearInterval(timer);
+        timer = null;
+      };
+
+      heroSlider.addEventListener('mouseenter', stop);
+      heroSlider.addEventListener('mouseleave', start);
+
+      start();
+    }
+  }
+
   const slider = document.getElementById('reviewSlider');
-  if(!slider) return;
+  if (!slider) return;
 
   const slides = Array.from(slider.querySelectorAll('.review-slide'));
   const prev = document.getElementById('revPrev');

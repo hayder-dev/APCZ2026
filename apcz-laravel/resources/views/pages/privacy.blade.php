@@ -1,16 +1,18 @@
 @extends('layouts.app')
 
-@section('title','Privacy — Auto Poets Centrale')
+@section('title', 'Privacyverklaring | Auto Poets Centrale Zaanstad')
+@section('meta_description', 'Lees hoe Auto Poets Centrale Zaanstad omgaat met persoonsgegevens, contactgegevens, voertuiggegevens, bewaartermijnen, cookies en jouw privacyrechten.')
+@section('canonical', url('/privacy'))
 
 @section('content')
 
 <section class="page-hero">
   <div class="container">
     <div class="page-hero__inner reveal">
-      <div class="page-hero__kicker">Auto Poets Centrale • Privacy • Gegevensbescherming</div>
-      <h1 class="page-hero__title">Privacy</h1>
+      <div class="page-hero__kicker">Auto Poets Centrale Zaanstad • Privacy • Gegevensbescherming</div>
+      <h1 class="page-hero__title">Privacyverklaring</h1>
       <p class="page-hero__lead">
-        Auto Poets Centrale  gaat zorgvuldig om met jouw persoonsgegevens. Op deze pagina leggen wij uit
+        Auto Poets Centrale Zaanstad gaat zorgvuldig om met jouw persoonsgegevens. Op deze pagina leggen wij uit
         welke gegevens wij verwerken, waarom wij dat doen, hoe lang wij deze bewaren en welke rechten je hebt.
       </p>
 
@@ -89,7 +91,7 @@
         <div class="card__body">
           <div class="card__title">Bewaartermijn</div>
           <p class="card__text" style="margin-top:8px;">
-            Auto Poets Centrale Zaanstad bewaart persoonsgegevens niet langer dan noodzakelijk is voor het doel waarvoor zij zijn verzameld.
+            Auto Poets Centrale Zaanstad bewaart persoonsgegevens niet langer dan noodzakelijk is voor het doel waarvoor deze zijn verzameld.
           </p>
           <ul class="card__text" style="margin-top:8px; padding-left:18px;">
             <li>Contact- en afspraakgegevens bewaren wij in de praktijk maximaal <b>24 maanden</b> voor service, opvolging en terugkerend contact.</li>
@@ -119,7 +121,7 @@
           </p>
           <p class="card__text" style="margin-bottom:0;">
             Wanneer in de toekomst aanvullende cookies, zoals analytische of marketingcookies, worden toegepast,
-            zal deze privacypagina daarop worden aangepast.
+            zal deze privacyverklaring daarop worden aangepast.
           </p>
         </div>
       </div>

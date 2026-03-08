@@ -1,6 +1,9 @@
 @extends('layouts.app')
 
-@section('title','Pakketten & Extra’s — Auto Poets Centrale Zaanstad')
+@section('title', 'Auto detailing pakketten in Zaandam | Auto Poets Centrale Zaanstad')
+@section('meta_description', 'Bekijk onze auto detailing pakketten in Zaandam en Zaanstad. Van auto laten poetsen en interieurreiniging tot showroomklaar maken, polijsten, wax en professionele verkooppresentatie voor klanten uit Zaandam, Wormerveer, Assendelft, Koog aan de Zaan, Krommenie, Purmerend en Amsterdam.')
+@section('meta_keywords', 'auto detailing zaandam, auto laten poetsen zaandam, autopoetsbedrijf zaanstad, showroomklaar maken zaandam, interieurreiniging auto, auto polijsten zaandam, auto poetsen purmerend, autodetailing amsterdam')
+@section('canonical', url('/diensten'))
 
 @section('content')
 
@@ -8,16 +11,13 @@
   <div class="container">
     <div class="page-hero__inner reveal">
       <div class="page-hero__kicker">Pakketten • Extra’s • Showroom-ready</div>
-      <h1 class="page-hero__title">Pakketten & extra’s</h1>
+      <h1 class="page-hero__title">Auto detailing pakketten & extra’s</h1>
       <p class="page-hero__lead">
-        Kies eerst het pakket dat past bij jouw auto en doel. Daarna kun je het uitbreiden met extra behandelingen
-        zoals koplampen polijsten, geurbehandeling of coatings.
+        Kies het pakket dat past bij jouw auto en het gewenste resultaat. Van auto laten poetsen en
+        interieurreiniging tot showroomklaar maken, polijsten en professionele verkooppresentatie.
+        Auto Poets Centrale Zaanstad helpt klanten uit Zaandam, Zaanstad en omgeving met nette,
+        duidelijke en professionele autoverzorging.
       </p>
-
-      <div class="page-hero__cta">
-        <a class="btn btn--dark" href="#pakketten">Bekijk pakketten</a>
-        <a class="btn btn--dark" href="#extras">Bekijk extra’s</a>
-      </div>
     </div>
   </div>
 </section>
@@ -26,9 +26,10 @@
   <div class="container">
 
     <div class="center stack reveal">
-      <h2 class="h2">Kies eerst je pakket</h2>
+      <h2 class="h2">Kies jouw pakket voor auto poetsen of detailing</h2>
       <p class="p section-intro">
-        Van een frisse opfrisbeurt tot complete showroom-afwerking met foto’s.
+        Van een frisse opfrisbeurt tot complete showroom-afwerking met professionele foto’s.
+        Geschikt voor auto laten poetsen, interieurreiniging, auto detailing en verkoopklaar maken.
         Alle prijzen zijn <b>vanaf-prijzen exclusief btw</b>.
       </p>
     </div>
@@ -40,7 +41,7 @@
           <div class="card__title">Brons pakket</div>
           <p class="card__text"><b>Vanaf € 70,-</b></p>
           <p class="card__text">
-            Voor een snelle frisse uitstraling. Perfect voor onderhoud of als je auto gewoon weer netjes en representatief moet zijn.
+            Voor een snelle frisse uitstraling. Ideaal voor onderhoud of wanneer je auto weer netjes en representatief moet zijn.
           </p>
 
           <div class="card__text" style="margin-top:10px;"><b>Inbegrepen</b></div>
@@ -67,7 +68,7 @@
           <div class="card__title">Brons+ pakket</div>
           <p class="card__text"><b>Vanaf € 125,-</b></p>
           <p class="card__text">
-            Alles van Brons, plus extra glans en bescherming voor de lak.
+            Alles van Brons, aangevuld met extra glans en bescherming voor de lak.
           </p>
 
           <div class="card__text" style="margin-top:10px;"><b>Inbegrepen</b></div>
@@ -75,7 +76,7 @@
             <li>Alles van Brons</li>
             <li>Waxbehandeling</li>
             <li>Waxoyl bescherming</li>
-            <li>Afwerking buitenkant met extra shine</li>
+            <li>Afwerking buitenkant met extra glans</li>
             <li>Snelle finishing details</li>
           </ul>
 
@@ -94,14 +95,14 @@
           <div class="card__title">Zilver pakket</div>
           <p class="card__text"><b>Vanaf € 150,-</b></p>
           <p class="card__text">
-            Voor wie het interieur echt fris en hygiënisch wil. Focus op dieptereiniging en detailwerk binnen.
+            Voor wie het interieur echt fris en hygiënisch wil hebben. De focus ligt op dieptereiniging en detailwerk aan de binnenzijde.
           </p>
 
           <div class="card__text" style="margin-top:10px;"><b>Inbegrepen</b></div>
           <ul class="card__text" style="margin-top:6px; padding-left:18px;">
             <li>Interieur dieptereiniging</li>
-            <li>Stofzuigen + detailwerk</li>
-            <li>Ramen binnen</li>
+            <li>Stofzuigen en detailwerk</li>
+            <li>Ramen binnenzijde</li>
             <li>Afwerking interieur</li>
             <li>Gecontroleerde oplevering</li>
           </ul>
@@ -128,7 +129,7 @@
           <div class="card__title">Zilver+ pakket</div>
           <p class="card__text"><b>Vanaf € 150,-</b></p>
           <p class="card__text">
-            Alleen de buitenkant: veilig wassen, polijsten en afwerken met wax voor diepe glans.
+            Gericht op de buitenzijde: veilig wassen, polijsten en afwerken met wax voor een diepe glans en nette presentatie.
           </p>
 
           <div class="card__text" style="margin-top:10px;"><b>Inbegrepen</b></div>
@@ -162,7 +163,7 @@
           <div class="card__title">Goud pakket</div>
           <p class="card__text"><b>Vanaf € 175,-</b></p>
           <p class="card__text">
-            Complete showroom-afwerking met focus op het totaalbeeld. Ideaal voor verkoop of presentatie.
+            Complete showroom-afwerking met focus op het totaalbeeld. Ideaal voor verkoop, presentatie of een volledige opfrisbeurt.
           </p>
 
           <div class="card__text" style="margin-top:10px;"><b>Inbegrepen</b></div>
@@ -189,16 +190,16 @@
           <div class="card__title">Goud+ pakket</div>
           <p class="card__text"><b>Vanaf € 225,-</b></p>
           <p class="card__text">
-            Alles van Goud, plus professionele foto’s voor advertenties of presentatie.
+            Alles van Goud, aangevuld met professionele foto’s voor advertenties, verkoop of presentatie.
           </p>
 
           <div class="card__text" style="margin-top:10px;"><b>Inbegrepen</b></div>
           <ul class="card__text" style="margin-top:6px; padding-left:18px;">
             <li>Alles van Goud</li>
-            <li>Professionele foto’s interieur & exterieur</li>
+            <li>Professionele foto’s interieur en exterieur</li>
             <li>Detailshots voor advertentiegebruik</li>
             <li>Verkoop-ready beeldset</li>
-            <li>Oplevering klaar om direct te plaatsen</li>
+            <li>Oplevering direct klaar om te plaatsen</li>
           </ul>
 
           <p class="card__text" style="margin-top:10px; opacity:.85;">
@@ -218,7 +219,7 @@
         <div class="center stack">
           <h2 class="h2" style="margin-bottom:0;">Pakket gekozen?</h2>
           <p class="p section-intro">
-            Kies daarna je optionele extra’s. Die worden automatisch meegenomen naar je aanvraag.
+            Kies daarna je optionele extra’s. Deze worden automatisch meegenomen naar je aanvraag.
           </p>
           <div class="action-row action-row--center" style="margin-top:8px;">
             <a class="btn btn--primary" href="#extras">Bekijk optionele extra’s</a>
@@ -227,6 +228,33 @@
       </div>
     </div>
 
+  </div>
+</section>
+
+<section class="section section--white seo-block" id="diensten-seo">
+  <div class="container">
+    <div class="center stack reveal">
+      <h2 class="h2">Auto laten poetsen in Zaandam en omgeving</h2>
+      <p class="p section-intro">
+        Zoek je een professioneel autopoetsbedrijf in Zaandam of specialist in auto detailing in Zaanstad?
+        Met onze pakketten kies je eenvoudig de behandeling die past bij jouw auto, budget en doel.
+      </p>
+    </div>
+
+    <div class="stack reveal" style="max-width:980px; margin:0 auto;">
+      <p class="p">
+        Wij verzorgen behandelingen voor klanten uit <b>Zaandam</b>, <b>Zaanstad</b>, <b>Wormerveer</b>,
+        <b>Assendelft</b>, <b>Koog aan de Zaan</b>, <b>Krommenie</b>, <b>Westzaan</b>, <b>Oostzaan</b>,
+        <b>Purmerend</b> en <b>Amsterdam</b>. Of je nu kiest voor een onderhoudsbeurt, dieptereiniging,
+        polijstbehandeling of complete showroom-afwerking: wij zorgen voor een verzorgde en representatieve oplevering.
+      </p>
+
+      <p class="p">
+        Onze pakketten zijn geschikt voor particulier gebruik, zakelijke voertuigen, verkoopvoorbereiding,
+        dealerpresentatie en showroomauto’s. Daarmee is deze pagina ideaal voor iedereen die een auto wil
+        laten poetsen, professioneel wil laten detailen of verkoopklaar wil laten maken in de regio Zaandam.
+      </p>
+    </div>
   </div>
 </section>
 
@@ -324,7 +352,7 @@
             <div class="card__title">Speciale coatings</div>
             <p class="card__text"><b>Prijs op aanvraag</b></p>
             <p class="card__text">
-              Glascoating, keramische coating of velgen-coating voor langdurige bescherming en makkelijker onderhoud.
+              Glascoating, keramische coating of velgen-coating voor langdurige bescherming en eenvoudiger onderhoud.
             </p>
           </div>
           <div style="margin-top:14px;">
@@ -339,7 +367,7 @@
       <div class="card__body">
         <div class="center stack">
           <h2 class="h2" style="margin-bottom:0;">Jouw keuze</h2>
-          <p> Dit zijn de gekozen opties die je hebt geselecteerd.</p>
+          <p class="p section-intro">Hieronder zie je de opties die je hebt geselecteerd.</p>
 
           <p class="p section-intro">
             <b>Pakket:</b> <span id="selectedPackageText">Nog geen pakket gekozen</span>
@@ -350,8 +378,7 @@
           </p>
 
           <div class="action-row action-row--center" style="margin-top:8px;">
-            <a id="extrasToContactBtn" class="btn btn--primary" href="{{ route('contact') }}">Afspraak inplannen?</a>
-            </a>
+            <a id="extrasToContactBtn" class="btn btn--primary" href="{{ route('contact') }}">Afspraak inplannen</a>
             <button id="extrasClearBtn" class="btn btn--outline" type="button">Wis selectie</button>
           </div>
         </div>

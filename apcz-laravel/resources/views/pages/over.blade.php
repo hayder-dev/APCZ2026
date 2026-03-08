@@ -1,21 +1,25 @@
 @extends('layouts.app')
-@section('title','Over ons — APCZ')
+
+@section('title', 'Over Auto Poets Centrale Zaanstad | Specialist sinds 2003')
+@section('meta_description', 'Lees meer over Auto Poets Centrale Zaanstad, specialist in auto laten poetsen, auto detailing, showroomklaar maken en zakelijke autoverzorging in Zaandam, Zaanstad en omgeving sinds 2003.')
+@section('meta_keywords', 'over autopoetsbedrijf zaandam, auto detailing zaanstad, auto laten poetsen zaandam, showroomklaar maken, autodetailing specialist, autoverzorging sinds 2003')
+@section('canonical', url('/over-ons'))
 
 @section('content')
 
 <section class="page-hero">
   <div class="container">
     <div class="page-hero__inner reveal">
-      <div class="page-hero__kicker">Sinds 2003 • Zaanstad • Randstad</div>
-      <h1 class="page-hero__title">Over Auto Poets Centrale Zaanstad</h1>
+      <div class="page-hero__kicker">Over ons</div>
+      <h1 class="page-hero__title">Auto Poets Centrale Zaanstad</h1>
       <p class="page-hero__lead">
-        Al sinds <b>2003</b> draait het bij ons om één ding: auto’s afleveren zoals ze horen te ogen —
-        strak, fris en representatief. Geen snelle schoonmaak, maar verzorging met aandacht, ervaring en gevoel voor detail.
+        Sinds <b>2003</b> verzorgen wij voertuigen met aandacht, rust en vakmanschap.
+        Geen snelle schoonmaak, maar een nette afwerking die past bij de uitstraling van de auto.
+        Wij helpen klanten uit Zaandam, Zaanstad en omgeving met professionele autoverzorging.
       </p>
 
       <div class="page-hero__cta">
-        <a class="btn btn--primary" href="{{ route('contact') }}">Afspraak plannen</a>
-        <a class="btn btn--dark" href="{{ route('diensten') }}">Bekijk pakketten</a>
+        <a class="btn btn--outline" href="#werkwijze">Werkwijze bekijken</a>
       </div>
     </div>
   </div>
@@ -27,24 +31,23 @@
     <div class="card reveal" style="max-width:1100px; margin:0 auto;">
       <div class="card__body" style="padding:32px 28px;">
         <div class="center stack">
-          <span class="badge">Sinds 2003 • +20 jaar ervaring • Vakmanschap • Vertrouwen</span>
+          <div style="width:120px; height:4px; margin:0 auto 6px; border-radius:999px; background:linear-gradient(90deg,#f4c400,#ffe27a,#fff4cb);"></div>
 
           <p class="p section-intro">
-            <b>Auto Poets Centrale Zaanstad bestaat sinds 2003.</b> In die jaren hebben wij talloze voertuigen verzorgd
-            voor particulieren, zakelijke rijders, dealers en wagenparken in Zaandam, Zaanstad en de rest van de Randstad.
+            <b>Auto Poets Centrale Zaanstad bestaat sinds 2003.</b> In die jaren hebben wij voertuigen verzorgd
+            voor particulieren, zakelijke rijders, dealers en wagenparken in <b>Zaandam</b>, <b>Zaanstad</b> en de rest van de Randstad.
             Die ervaring zie je terug in onze werkwijze: rustig, zorgvuldig en met oog voor het totaalplaatje.
           </p>
 
           <p class="p section-intro">
             Voor ons is een auto pas echt klaar wanneer hij niet alleen schoon is, maar ook <b>verzorgd aanvoelt</b>.
             Dat zit in de details: strak glas, nette randen, een fris interieur, een verzorgd lakbeeld en een uitstraling
-            die direct vertrouwen geeft. Geen half werk, maar een resultaat dat klopt.
+            die direct vertrouwen geeft.
           </p>
 
           <p class="p section-intro">
-            Wij werken met duidelijke afspraken, veilige methodes en professionele producten. Of het nu gaat om periodiek onderhoud,
-            showroom-afwerking, verkoopvoorbereiding of een complete opfrisbeurt: bij Auto Poets Centrale Zaanstad
-            draait het om <b>consistentie, kwaliteit en nette oplevering</b> — elke auto opnieuw.
+            Of het nu gaat om onderhoud, showroom-afwerking, verkoopvoorbereiding of een complete opfrisbeurt:
+            wij werken met duidelijke afspraken, veilige methodes en een nette oplevering — elke auto opnieuw.
           </p>
         </div>
       </div>
@@ -54,7 +57,7 @@
       <div class="card__media">
         <img
           src="{{ asset('assets/projects/zakelijk/11.JPEG') }}"
-          alt="APCZ studio / detailing"
+          alt="Auto Poets Centrale Zaanstad studio en detailing werkzaamheden"
         >
       </div>
     </div>
@@ -65,20 +68,20 @@
           <div class="card__title">Onze aanpak</div>
           <p class="card__text">
             Wij werken rustig, gecontroleerd en met aandacht voor detail. Juist daarin zit het verschil:
-            een auto die niet alleen schoon lijkt, maar echt verzorgd voor de dag komt.
+            een auto die niet alleen schoon oogt, maar echt verzorgd voor de dag komt.
           </p>
 
           <ul class="card__text" style="margin-top:8px; padding-left:18px;">
             <li>Veilige technieken en professionele middelen</li>
-            <li>Detail-afwerking van kieren, randen en instappen</li>
-            <li>Heldere planning en duidelijke communicatie</li>
+            <li>Detail-afwerking van randen, kieren en instappen</li>
+            <li>Duidelijke planning en heldere communicatie</li>
           </ul>
         </div>
       </div>
 
       <div class="card">
         <div class="card__body">
-          <div class="card__title">Voor wie we werken</div>
+          <div class="card__title">Voor wie wij werken</div>
           <p class="card__text">
             Wij werken voor zowel particuliere als zakelijke klanten — van één auto tot grotere aantallen.
           </p>
@@ -90,14 +93,14 @@
           </ul>
 
           <p class="card__text" style="margin-top:10px;">
-            Voor zakelijke klanten kunnen wij ook werken met vaste slots en periodiek onderhoud.
+            Voor zakelijke klanten denken wij ook mee over vaste slots en periodiek onderhoud.
           </p>
         </div>
       </div>
 
       <div class="card">
         <div class="card__body">
-          <div class="card__title">Kwaliteit & transparantie</div>
+          <div class="card__title">Kwaliteit & duidelijkheid</div>
           <p class="card__text">
             Wij doen geen loze beloftes. We zijn eerlijk over wat haalbaar is en kiezen altijd voor een veilige,
             verantwoorde aanpak die past bij de staat van het voertuig.
@@ -106,7 +109,7 @@
           <ul class="card__text" style="margin-top:8px; padding-left:18px;">
             <li><b>Motorruimte reinigen:</b> altijd op eigen risico</li>
             <li><b>Schade of gespoten delen:</b> graag vooraf melden</li>
-            <li>Bij extreme vervuiling bespreken we extra werk vooraf</li>
+            <li>Extra werk bespreken we altijd vooraf</li>
           </ul>
         </div>
       </div>
@@ -115,11 +118,28 @@
     <div class="card reveal" style="margin-top:22px;">
       <div class="card__body">
         <div class="center stack">
+          <h2 class="h2" style="margin-bottom:0;">Autopoetsbedrijf voor Zaandam en omgeving</h2>
+          <p class="p section-intro">
+            Auto Poets Centrale Zaanstad helpt klanten uit <b>Zaandam</b>, <b>Zaanstad</b>,
+            <b>Wormerveer</b>, <b>Assendelft</b>, <b>Koog aan de Zaan</b>, <b>Krommenie</b>,
+            <b>Westzaan</b>, <b>Oostzaan</b>, <b>Purmerend</b> en <b>Amsterdam</b> met auto laten poetsen,
+            auto detailing, showroomklaar maken en zakelijke autoverzorging.
+          </p>
+          <p class="p section-intro">
+            Door die brede ervaring weten wij goed wat er nodig is voor dagelijks gebruik,
+            verkoopvoorbereiding, dealerpresentatie en periodiek onderhoud van voertuigen.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card reveal" style="margin-top:22px;" id="werkwijze">
+      <div class="card__body">
+        <div class="center stack">
           <h2 class="h2">Zo verloopt een afspraak</h2>
           <p class="p section-intro">
-            Je plant een afspraak, we stemmen samen het doel af en daarna voeren wij de behandeling zorgvuldig uit.
-            In veel gevallen geldt: voertuig om <b>08:00</b> brengen = <b>dezelfde dag</b> ophalen
-            (wij zijn geopend tot <b>17:00</b>).
+            We stemmen samen het doel af, bekijken de staat van de auto en voeren daarna de behandeling zorgvuldig uit.
+            In veel gevallen geldt: voertuig om <b>08:00</b> brengen = <b>dezelfde dag</b> weer ophalen.
           </p>
         </div>
 
@@ -128,7 +148,7 @@
             <div class="card__body">
               <div class="card__title">1) Intake</div>
               <p class="card__text">
-                We bespreken jouw wensen, kijken naar de staat van de auto en bepalen welke behandeling het beste past.
+                We bespreken jouw wensen en kijken welke behandeling het beste past bij het voertuig.
               </p>
             </div>
           </div>
@@ -151,25 +171,20 @@
             </div>
           </div>
         </div>
-
-        <div class="action-row action-row--center" style="margin-top:18px;">
-          <a class="btn btn--primary" href="{{ route('contact') }}?route=over">Plan je afspraak</a>
-        </div>
       </div>
     </div>
 
     <div class="card reveal" style="margin-top:22px;">
       <div class="card__body">
         <div class="center stack">
-          <h2 class="h2" style="margin-bottom:0;">Nieuwsgierig? Kom gerust langs.</h2>
+          <h2 class="h2" style="margin-bottom:0;">Nieuwsgierig? Neem gerust contact op.</h2>
           <p class="p section-intro">
-            Wil je eerst sfeer proeven, overleggen over jouw auto of gewoon even kijken wat we doen?
-            Je bent van harte welkom om contact op te nemen of langs te komen. Dan laten we je graag zien
-            hoe wij werken en wat het beste past bij jouw voertuig.
+            Wil je overleggen over jouw auto, weten wat het beste past of gewoon even kennismaken?
+            Neem gerust contact met ons op. Dan denken we met je mee en geven we je eerlijk advies.
           </p>
 
           <div class="action-row action-row--center" style="margin-top:8px;">
-          
+            <a class="btn btn--primary" href="{{ route('contact') }}?route=over">Contact opnemen</a>
           </div>
         </div>
       </div>

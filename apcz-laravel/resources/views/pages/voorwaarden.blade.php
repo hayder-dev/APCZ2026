@@ -1,14 +1,16 @@
 @extends('layouts.app')
 
-@section('title','Voorwaarden — APCZ')
+@section('title', 'Algemene voorwaarden | Auto Poets Centrale Zaanstad')
+@section('meta_description', 'Lees de voorwaarden van Auto Poets Centrale Zaanstad over prijzen, toeslagen, planning, oplevering, risico’s, betaling en behandeling van voertuigen.')
+@section('canonical', url('/voorwaarden'))
 
 @section('content')
 
 <section class="page-hero">
   <div class="container">
     <div class="page-hero__inner reveal">
-      <div class="page-hero__kicker">APC • Voorwaarden • Duidelijke afspraken</div>
-      <h1 class="page-hero__title">Voorwaarden</h1>
+      <div class="page-hero__kicker">APCZ • Voorwaarden • Duidelijke afspraken</div>
+      <h1 class="page-hero__title">Algemene voorwaarden</h1>
       <p class="page-hero__lead">
         Duidelijke afspraken zorgen voor een strak resultaat. Hieronder vind je de belangrijkste voorwaarden
         rondom onze diensten, prijzen, oplevering en aandachtspunten bij behandeling van voertuigen.
@@ -162,7 +164,7 @@
         <div class="card__body">
           <div class="card__title">Resultaat en verwachtingen</div>
           <p class="card__text" style="margin-top:8px;">
-            De auto poets centrale streeft altijd naar een zo strak en verzorgd mogelijk eindresultaat. Toch is iedere auto anders en zijn
+            Auto Poets Centrale Zaanstad streeft altijd naar een zo strak en verzorgd mogelijk eindresultaat. Toch is iedere auto anders en zijn
             resultaten afhankelijk van onder andere leeftijd, onderhoudshistorie, lakdikte, gebruikssporen en materiaalconditie.
           </p>
           <ul class="card__text" style="margin-top:8px; padding-left:18px;">
@@ -182,7 +184,7 @@
           </p>
           <ul class="card__text" style="margin-top:8px; padding-left:18px;">
             <li>Hieronder vallen onder andere: loslatende lak, zwakke blanke lak, verkleefde hemelbekleding, kwetsbare interieurdelen, elektronische storingen of slecht herstelde schade.</li>
-            <li>Wanneer tijdens de behandeling blijkt dat een onderdeel of oppervlak gevoeliger reageert dan normaal, kan Auto poets centrale zaanstad besluiten de behandeling aan te passen of te stoppen.</li>
+            <li>Wanneer tijdens de behandeling blijkt dat een onderdeel of oppervlak gevoeliger reageert dan normaal, kan Auto Poets Centrale Zaanstad besluiten de behandeling aan te passen of te stoppen.</li>
             <li>Dit gebeurt altijd met het doel om verdere schade of onveilige situaties te voorkomen.</li>
           </ul>
         </div>
