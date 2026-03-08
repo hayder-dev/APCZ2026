@@ -1290,19 +1290,95 @@ details[open] .faq__a{
   transform:translateY(0);
 }
 
+/* FAQ Search */
+.faq-search{
+  display:flex;
+  gap:12px;
+  align-items:center;
+  padding:14px 0 22px;
+}
+
+.faq-search__input{
+  width:100%;
+  padding:14px 16px;
+  border-radius:14px;
+  border:1px solid rgba(0,0,0,.10);
+  background:#fff;
+  color:#111;
+  font-weight:650;
+  outline:none;
+}
+
+.faq-search__input:focus{
+  border-color: rgba(244,196,0,.55);
+  box-shadow: 0 0 0 4px rgba(244,196,0,.16);
+}
+
+.faq-search__clear{
+  padding:14px 16px;
+  border-radius:14px;
+  border:1px solid rgba(0,0,0,.10);
+  background:#fff;
+  color:#111;
+  font-weight:850;
+  cursor:pointer;
+  white-space:nowrap;
+}
+
+.faq-search__clear:hover{
+  border-color: rgba(0,0,0,.18);
+}
+
+/* FAQ + / - icon (premium) */
+.faq__item > summary::-webkit-details-marker{ display:none; }
+.faq__q{
+  position:relative;
+  padding-right:52px; /* ruimte voor icoon */
+  cursor:pointer;
+}
+
+.faq__q::after{
+  content:"+";
+  position:absolute;
+  right:14px;
+  top:50%;
+  transform:translateY(-50%);
+  width:32px;
+  height:32px;
+  border-radius:999px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:900;
+  line-height:1;
+  color:#111;
+  background: linear-gradient(90deg, #f4c400 0%, #ffd84d 34%, #fff1b5 100%);
+  box-shadow: 0 10px 30px rgba(244,196,0,.18);
+  border:1px solid rgba(0,0,0,.08);
+}
+
+.faq__item[open] > .faq__q::after{
+  content:"–";
+}
+
+/* Filter hide */
+.faq__item.is-hidden{
+  display:none !important;
+}
+
 /* Footer */
 .footer{
   background:
     radial-gradient(900px 300px at 50% 0%, rgba(244,196,0,.08), transparent 60%),
     #060606;
-  color:rgba(255,255,255,.80);
-  padding:55px 0 28px;
+  color: rgba(255,255,255,.80);
 }
 
-.footer .container{
+.footer__grid{
   display:grid;
-  grid-template-columns:1.2fr 1fr 1fr;
+  grid-template-columns:1.2fr 1fr 1fr 1fr;
   gap:22px;
+  padding:55px 0 28px;
 }
 
 .footer h3{
@@ -1311,23 +1387,103 @@ details[open] .faq__a{
   font-weight:900;
 }
 
+.footer__text{
+  margin:0;
+  line-height:1.9;
+  color:rgba(255,255,255,.80);
+}
+
 .footer a{
   color:rgba(255,255,255,.82);
+  text-decoration:none;
 }
 
 .footer a:hover{
   color:var(--yellow);
 }
 
-.footer__bottom{
-  border-top:1px solid rgba(255,255,255,.08);
-  margin-top:28px;
-  padding-top:18px;
+.footer__buttons{
+  margin-top:14px;
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+.footer__links{
+  list-style:none;
+  margin:0;
+  padding:0;
+  display:grid;
+  gap:10px;
+}
+
+.footer__bar{
+  position:relative;
+  background:linear-gradient(90deg, #f4c400 0%, #ffd84d 34%, #fff1b5 100%);
+  color:#151515;
+  border-top:1px solid rgba(0,0,0,.10);
+  box-shadow:0 -8px 26px rgba(244,196,0,.18);
+  overflow:hidden;
+}
+
+.footer__bar::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.22), rgba(255,255,255,0)),
+    radial-gradient(500px 140px at 12% 0%, rgba(255,255,255,.22), transparent 55%);
+}
+
+.footer__bar-inner{
+  border-top:1px solid rgba(0,0,0,.08);
+  min-height:58px;
   display:flex;
   justify-content:space-between;
+  align-items:center;
   gap:12px;
   flex-wrap:wrap;
   font-size:.95rem;
+  font-weight:700;
+}
+
+.footer__bar-inner{
+  border-top:1px solid rgba(0,0,0,.08);
+  min-height:58px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  flex-wrap:wrap;
+  font-size:.95rem;
+  font-weight:700;
+}
+
+.footer__bar a{
+  color:#151515;
+}
+
+.footer__bar a:hover{
+  color:#000;
+}
+
+@media (max-width: 980px){
+  .footer__grid{
+    grid-template-columns:1fr 1fr;
+  }
+}
+
+@media (max-width: 640px){
+  .footer__grid{
+    grid-template-columns:1fr;
+  }
+
+  .footer__bar-inner{
+    padding:14px 0;
+    flex-direction:column;
+    align-items:flex-start;
+  }
 }
 
 /* Floating WhatsApp */
@@ -1357,6 +1513,21 @@ details[open] .faq__a{
 .whatsapp svg{
   width:20px;
   height:20px;
+}
+
+.btn--whatsapp{
+  background:#25D366;
+  color:#07140c;
+  border:1px solid #25D366;
+  font-weight:850;
+  box-shadow:0 14px 34px rgba(37,211,102,.22);
+}
+
+.btn--whatsapp:hover{
+  background:#20bd5a;
+  border-color:#20bd5a;
+  color:#07140c;
+  transform:translateY(-1px);
 }
 
 /* Reveal */
@@ -1478,15 +1649,6 @@ details[open] .faq__a{
     gap:10px;
   }
 
-  .footer .container{
-    grid-template-columns:1fr;
-  }
-
-  .footer__bottom{
-    flex-direction:column;
-    align-items:flex-start;
-  }
-
   .card.package-card .package-corner-mini{
     top:10px;
     right:10px;
@@ -1499,5 +1661,90 @@ details[open] .faq__a{
     height:10px;
     min-width:10px;
     min-height:10px;
+  }
+}
+
+/* Cookie banner (APCZ) */
+.cookie{
+  position:fixed;
+  left:16px;
+  right:16px;
+  bottom:16px;
+  z-index:2000;
+  display:flex;
+  justify-content:center;
+}
+
+.cookie__inner{
+  width:100%;
+  max-width:1100px;
+  background:rgba(6,6,6,.96);
+  color:#fff;
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:18px;
+  box-shadow:0 20px 70px rgba(0,0,0,.38);
+  padding:16px 18px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+}
+
+.cookie__text strong{
+  display:block;
+  font-size:15px;
+  font-weight:900;
+  margin-bottom:6px;
+}
+
+.cookie__text p{
+  margin:0;
+  line-height:1.55;
+  color:rgba(255,255,255,.82);
+  font-size:14px;
+}
+
+.cookie__text a{
+  color:var(--yellow);
+  text-decoration:none;
+}
+
+.cookie__text a:hover{
+  text-decoration:underline;
+}
+
+.cookie__actions{
+  display:flex;
+  gap:10px;
+  flex-shrink:0;
+}
+.cookie{
+  position:fixed;
+  left:16px;
+  right:16px;
+  bottom:16px;
+  z-index:99999;           /* SUPER hoog */
+  pointer-events:auto;     /* clicks toestaan */
+  display:flex;
+  justify-content:center;
+}
+
+.cookie__inner{
+  pointer-events:auto;     /* extra zekerheid */
+}
+
+@media (max-width: 760px){
+  .cookie__inner{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .cookie__actions{
+    width:100%;
+  }
+
+  .cookie__actions .cookie__btn{
+    flex:1;
+    width:100%;
   }
 }

@@ -13,9 +13,9 @@
           06 - 49777080
         </a>
 
-        <a class="topbar__item" href="mailto:boekingen@apczaanstad.nl">
+        <a class="topbar__item" href="mailto:info@apczaanstad.nl">
           <span class="topbar__icon" aria-hidden="true">✉️</span>
-          boekingen@apczaanstad.nl
+          info@apczaanstad.nl
         </a>
       </div>
 
@@ -68,7 +68,7 @@
     </nav>
 
     <div class="header__actions">
-      <a class="btn btn--outline" href="https://wa.me/31649777080" target="_blank" rel="noopener">WhatsApp</a>
+     <a class="btn btn--whatsapp" href="https://wa.me/31649777080" target="_blank" rel="noopener">WhatsApp</a>
       <a class="btn btn--primary" href="{{ route('contact') }}">Afspraak plannen</a>
 
       <button

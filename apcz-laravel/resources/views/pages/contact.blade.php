@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title','Contact — APCZ')
+@section('title','Contact — Auto Poets Centrale Zaanstad')
 
 @section('content')
 
@@ -10,13 +10,13 @@
       <div class="page-hero__kicker">Contact • Offerte • Afspraak</div>
       <h1 class="page-hero__title">Plan je afspraak of vraag een offerte aan</h1>
       <p class="page-hero__lead">
-        Meestal kun je de auto, bij inleveren om <b>08:00</b>, dezelfde dag weer ophalen.
-        We zijn geopend tot <b>17:00</b>.
+        Breng je de auto in de ochtend rond 08:00 bij ons langs, dan hebben wij alle tijd om deze zorgvuldig onder handen te nemen.
+        In de meeste gevallen is de auto <b>dezelfde dag weer klaar</b> om opgehaald te worden.
+        Zo kun je hem later op de dag weer lekker fris en fruitig in topconditie meenemen.
       </p>
 
       <div class="page-hero__cta">
-        <a class="btn btn--dark" href="#contact-form">Naar formulier</a>
-        <a class="btn btn--primary" href="https://wa.me/31649777080" target="_blank" rel="noopener">WhatsApp</a>
+
       </div>
     </div>
   </div>
@@ -56,8 +56,9 @@
           <div class="stack">
             <div class="card__title">Offerte / afspraak aanvragen</div>
             <p class="card__text" style="opacity:.86;">
-              Vul hieronder je gegevens in. Als je via de pakkettenpagina komt,
-              nemen we jouw gekozen pakket en extra’s automatisch mee.
+              Plan eenvoudig een afspraak door hieronder je gegevens in te vullen.
+Heb je een pakket gekozen? Dan worden jouw gekozen pakket en  extra’s automatisch toegevoegd aan de aanvraag.
+Vul indien mogelijk ook het kenteken van je voertuig in. Zo kunnen wij direct zien om welk type auto en bouwjaar het gaat, zodat wij de juiste behandeling en indicatie kunnen voorbereiden.
             </p>
           </div>
 
@@ -155,8 +156,6 @@
 
             <div class="action-row action-row--center" style="margin-top:18px;">
               <button class="btn btn--primary" type="submit">Verstuur aanvraag</button>
-              <a class="btn" href="https://wa.me/31649777080" target="_blank" rel="noopener" style="background:#25D366; color:#07140c; border-color:#25D366;">
-                WhatsApp
               </a>
             </div>
 
@@ -174,7 +173,7 @@
 
           <p class="card__text">
             <b>Telefoon:</b> <a href="tel:+31649777080">06 - 49777080</a><br>
-            <b>E-mail:</b> <a href="mailto:boekingen@apczaanstad.nl">boekingen@apczaanstad.nl</a>
+            <b>E-mail:</b> <a href="mailto:info@apczaanstad.nl">info@apczaanstad.nl</a>
           </p>
 
           <div class="card__text" style="margin-top:10px;"><b>Openingstijden</b></div>

@@ -170,3 +170,86 @@
     }
   }
 })();
+
+document.addEventListener('DOMContentLoaded', () => {
+  const input = document.getElementById('faqSearch');
+  const clearBtn = document.getElementById('faqSearchClear');
+  if (!input) return;
+
+  const items = Array.from(document.querySelectorAll('.faq__item'));
+
+  const normalize = (s) =>
+    (s || '')
+      .toLowerCase()
+      .replace(/\s+/g, ' ')
+      .trim();
+
+  const filterFaq = () => {
+    const q = normalize(input.value);
+
+    // Als leeg: alles terug
+    if (!q) {
+      items.forEach((it) => {
+        it.classList.remove('is-hidden');
+      });
+      return;
+    }
+
+    items.forEach((it) => {
+      const summary = it.querySelector('summary');
+      const answer = it.querySelector('.faq__a');
+      const text = normalize(
+        (summary ? summary.textContent : '') + ' ' + (answer ? answer.textContent : '')
+      );
+
+      const match = text.includes(q);
+
+      it.classList.toggle('is-hidden', !match);
+
+      // Optioneel: open matches automatisch zodra je zoekt (voelt fijn)
+      if (match) it.open = true;
+    });
+  };
+
+  input.addEventListener('input', filterFaq);
+
+  if (clearBtn) {
+    clearBtn.addEventListener('click', () => {
+      input.value = '';
+      filterFaq();
+      input.focus();
+    });
+  }
+});
+
+// Cookie consent (APCZ)
+document.addEventListener('DOMContentLoaded', () => {
+  const banner = document.getElementById('cookieBanner');
+  if (!banner) return;
+
+  const KEY = 'apcz_cookie_consent'; // values: accepted | declined
+  const current = localStorage.getItem(KEY);
+
+  // Toon banner alleen als er nog geen keuze is
+  if (!current) banner.hidden = false;
+
+  const setConsent = (value) => {
+    localStorage.setItem(KEY, value);
+    banner.hidden = true;
+
+    // Event (handig als je later scripts wil laden)
+    window.dispatchEvent(new CustomEvent('apcz:cookie-consent', { detail: { value } }));
+
+    // Voor later: hier kun je analytics pas laden bij accepted
+    // if (value === 'accepted') { loadAnalytics(); }
+  };
+
+  banner.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-cookie-action]');
+    if (!btn) return;
+
+    const action = btn.getAttribute('data-cookie-action');
+    if (action === 'accept') setConsent('accepted');
+    if (action === 'decline') setConsent('declined');
+  });
+});

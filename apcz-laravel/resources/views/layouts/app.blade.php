@@ -18,17 +18,10 @@
     @yield('content')
   </main>
 
-  <footer class="footer">
-    <div class="container footer__bottom">
-      <div>© 2026 Auto Poets Centrale Zaanstad — Alle rechten voorbehouden.</div>
-      <div>
-        <a href="{{ route('privacy') }}">Privacy</a>
-        •
-        <a href="{{ route('voorwaarden') }}">Voorwaarden</a>
-      </div>
-    </div>
-  </footer>
+  @include('partials.footer')
+  @include('partials.cookie-banner')
 
   <script src="{{ asset('assets/js/main.js') }}"></script>
+  <script src="{{ asset('assets/js/cookies.js') }}?v=1"></script>
 </body>
 </html>

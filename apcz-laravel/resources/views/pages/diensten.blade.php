@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title','Pakketten & Extra’s — APCZ')
+@section('title','Pakketten & Extra’s — Auto Poets Centrale Zaanstad')
 
 @section('content')
 
@@ -57,7 +57,7 @@
           </p>
 
           <div style="margin-top:14px;">
-            <a class="btn btn--dark package-pick" href="#" data-package="bronze" data-package-label="Brons pakket">Kies dit pakket</a>
+            <a class="btn btn--dark package-pick" href="#" data-package="Brons" data-package-label="Brons pakket">Kies dit pakket</a>
           </div>
         </div>
       </div>
@@ -84,7 +84,7 @@
           </p>
 
           <div style="margin-top:14px;">
-            <a class="btn btn--dark package-pick" href="#" data-package="bronze-wax" data-package-label="Brons+ pakket">Kies dit pakket</a>
+            <a class="btn btn--dark package-pick" href="#" data-package="Brons plus" data-package-label="Brons plus pakket">Kies dit pakket</a>
           </div>
         </div>
       </div>
@@ -111,7 +111,7 @@
           </p>
 
           <div style="margin-top:14px;">
-            <a class="btn btn--dark package-pick" href="#" data-package="silver" data-package-label="Zilver pakket">Kies dit pakket</a>
+            <a class="btn btn--dark package-pick" href="#" data-package="Zilver" data-package-label="Zilver pakket">Kies dit pakket</a>
           </div>
         </div>
       </div>
@@ -145,7 +145,7 @@
           </p>
 
           <div style="margin-top:14px;">
-            <a class="btn btn--dark package-pick" href="#" data-package="silver-plus" data-package-label="Zilver+ pakket">Kies dit pakket</a>
+            <a class="btn btn--dark package-pick" href="#" data-package="Zilver plus" data-package-label="Zilver plus pakket">Kies dit pakket</a>
           </div>
         </div>
       </div>
@@ -179,7 +179,7 @@
           </p>
 
           <div style="margin-top:14px;">
-            <a class="btn btn--dark package-pick" href="#" data-package="gold" data-package-label="Goud pakket">Kies dit pakket</a>
+            <a class="btn btn--dark package-pick" href="#" data-package="Goud" data-package-label="Goud pakket">Kies dit pakket</a>
           </div>
         </div>
       </div>
@@ -206,7 +206,7 @@
           </p>
 
           <div style="margin-top:14px;">
-            <a class="btn btn--dark package-pick" href="#" data-package="platinum" data-package-label="Goud+ pakket">Kies dit pakket</a>
+            <a class="btn btn--dark package-pick" href="#" data-package="Goud plus" data-package-label="Goud plus pakket">Kies dit pakket</a>
           </div>
         </div>
       </div>
@@ -277,7 +277,7 @@
         <div class="card__body" style="display:flex; flex-direction:column; height:100%;">
           <div style="flex:1;">
             <div class="card__title">Hondenharen verwijderen</div>
-            <p class="card__text"><b>Vanaf € 25,-</b></p>
+            <p class="card__text"><b>Vanaf € 50,-</b></p>
             <p class="card__text">
               Intensieve behandeling voor bekleding, kieren en vloerbedekking, inclusief lastig bereikbare plekken.
             </p>
@@ -339,6 +339,7 @@
       <div class="card__body">
         <div class="center stack">
           <h2 class="h2" style="margin-bottom:0;">Jouw keuze</h2>
+          <p> Dit zijn de gekozen opties die je hebt geselecteerd.</p>
 
           <p class="p section-intro">
             <b>Pakket:</b> <span id="selectedPackageText">Nog geen pakket gekozen</span>
@@ -349,9 +350,7 @@
           </p>
 
           <div class="action-row action-row--center" style="margin-top:8px;">
-            <a id="extrasToContactBtn" class="btn btn--primary" href="{{ route('contact') }}">Afspraak aanvragen</a>
-            <a class="btn" href="https://wa.me/31649777080" target="_blank" rel="noopener" style="background:#25D366; color:#07140c; border-color:#25D366;">
-              WhatsApp
+            <a id="extrasToContactBtn" class="btn btn--primary" href="{{ route('contact') }}">Afspraak inplannen?</a>
             </a>
             <button id="extrasClearBtn" class="btn btn--outline" type="button">Wis selectie</button>
           </div>
